@@ -22,7 +22,7 @@ public class Pregunta5 extends AppCompatActivity implements View.OnClickListener
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pregunta5);
-        vueltaAtras=new Intent(Pregunta5.this,MainActivity.class);
+        i=new Intent(Pregunta5.this,MainActivity.class);
         vueltaAtras=new Intent(Pregunta5.this,MainActivity.class);
         a= findViewById(R.id.respuesta1);
         b= findViewById(R.id.respuesta2);
@@ -105,15 +105,14 @@ public class Pregunta5 extends AppCompatActivity implements View.OnClickListener
                 break;
             case R.id.siguientePregunta:
                 startActivity(i);
-
+                break;
             case R.id.volver:
                 startActivity(vueltaAtras);
-
+                break;
             default:
         }
         i.putExtra("puntuacion",puntuacion);
-        System.out.print("Puntuacion: ");
-        System.out.println(puntuacion);
+        System.out.print("Puntuacion: " + puntuacion);
     }
 
     @Override

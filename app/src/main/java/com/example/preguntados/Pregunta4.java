@@ -70,7 +70,7 @@ public class Pregunta4 extends AppCompatActivity implements View.OnClickListener
             case R.id.respuesta2:
                 puntuacion= puntuacion-2;
                 b.setBackgroundColor(Color.RED);
-                a.setBackgroundColor(Color.GREEN);
+                d.setBackgroundColor(Color.GREEN);
                 a.setEnabled(false);
                 b.setEnabled(false);
                 c.setEnabled(false);
@@ -83,7 +83,7 @@ public class Pregunta4 extends AppCompatActivity implements View.OnClickListener
             case R.id.respuesta3:
                 puntuacion= puntuacion-2;
                 c.setBackgroundColor(Color.RED);
-                a.setBackgroundColor(Color.GREEN);
+                d.setBackgroundColor(Color.GREEN);
                 a.setEnabled(false);
                 b.setEnabled(false);
                 c.setEnabled(false);
@@ -105,15 +105,14 @@ public class Pregunta4 extends AppCompatActivity implements View.OnClickListener
                 break;
             case R.id.siguientePregunta:
                 startActivity(i);
-
+                break;
             case R.id.volver:
                 startActivity(vueltaAtras);
-
+                break;
             default:
         }
         i.putExtra("puntuacion",puntuacion);
-        System.out.print("Puntuacion: ");
-        System.out.println(puntuacion);
+        System.out.print("Puntuacion: " + puntuacion);
     }
 
     @Override

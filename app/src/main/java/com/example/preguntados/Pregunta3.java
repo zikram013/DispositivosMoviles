@@ -31,6 +31,7 @@ public class Pregunta3 extends AppCompatActivity implements View.OnClickListener
         sig= findViewById(R.id.siguientePregunta);
         atras=findViewById(R.id.volver);
         atras.setVisibility(View.INVISIBLE);
+        sig.setVisibility(View.INVISIBLE);
         try{
 
         }catch (Exception e){
@@ -98,21 +99,21 @@ public class Pregunta3 extends AppCompatActivity implements View.OnClickListener
                 c.setEnabled(false);
                 d.setEnabled(false);
                 sig.setEnabled(true);
+                atras.setEnabled(true);
                 sig.setVisibility(View.VISIBLE);
                 atras.setVisibility(View.VISIBLE);
                 break;
             case R.id.siguientePregunta:
                 startActivity(i);
-
+                break;
             case R.id.volver:
                 startActivity(vueltaAtras);
-
+                break;
             default:
         }
         i.putExtra("puntuacion",puntuacion);
-        System.out.print("Puntuacion: ");
-        System.out.println(puntuacion);
-    }
+        System.out.print("Puntuacion: " + puntuacion);
+}
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

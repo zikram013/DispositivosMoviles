@@ -96,15 +96,15 @@ public class Pregunta1 extends AppCompatActivity implements View.OnClickListener
                 break;
             case R.id.siguientePregunta:
                 startActivity(i);
-
+                break;
             case R.id.volver:
                 startActivity(vueltaAtras);
-
+                break;
             default:
         }
-        System.out.print("Puntuacion: ");
-       System.out.println(puntuacion);
+
         i.putExtra("puntuacion",puntuacion);
+        System.out.print("Puntuacion: " + puntuacion);
     }
 
     @Override
