@@ -39,7 +39,7 @@ public class Pregunta5 extends AppCompatActivity implements View.OnClickListener
         }
         recibe=getIntent();
         bolsa=recibe.getExtras();
-        puntuacion=bolsa.getInt("calificacion");
+        puntuacion=bolsa.getInt("puntuacion");
         a.setOnClickListener(this);
         b.setOnClickListener(this);
         c.setOnClickListener(this);
@@ -48,6 +48,7 @@ public class Pregunta5 extends AppCompatActivity implements View.OnClickListener
         sig.setOnClickListener(this);
         sig.setEnabled(false);
         atras.setEnabled(false);
+        System.out.println("Bolsa: " + bolsa.getInt("puntuacion"));
 
     }
 
@@ -112,7 +113,7 @@ public class Pregunta5 extends AppCompatActivity implements View.OnClickListener
             default:
         }
         i.putExtra("puntuacion",puntuacion);
-        System.out.print("Puntuacion: " + puntuacion);
+        System.out.println("Puntuacion: " + puntuacion);
     }
 
     @Override

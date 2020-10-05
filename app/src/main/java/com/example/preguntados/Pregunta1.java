@@ -104,7 +104,7 @@ public class Pregunta1 extends AppCompatActivity implements View.OnClickListener
         }
 
         i.putExtra("puntuacion",puntuacion);
-        System.out.print("Puntuacion: " + puntuacion);
+        System.out.println("Puntuacion: " + puntuacion);
     }
 
     @Override
