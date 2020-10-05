@@ -102,23 +102,13 @@ public class Pregunta1 extends AppCompatActivity implements View.OnClickListener
 
             default:
         }
+        System.out.print("Puntuacion: ");
+       System.out.println(puntuacion);
         i.putExtra("puntuacion",puntuacion);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         return super.onCreateOptionsMenu(menu);
-    }
-
-    public void bloquearBoton(){
-        a.setBackgroundColor(Color.RED);
-        b.setBackgroundColor(Color.RED);
-        c.setBackgroundColor(Color.RED);
-        d.setBackgroundColor(Color.GREEN);
-        a.setEnabled(false);
-        b.setEnabled(false);
-        c.setEnabled(false);
-        d.setEnabled(false);
-        sig.setEnabled(true);
     }
 }

@@ -9,7 +9,7 @@
     tools:context=".Pregunta4">
 
     <TextView
-        android:id="@+id/enunciado1"
+        android:id="@+id/pregunta4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="¿De qué trabaja Joe Goldberg en la serie «YOU»?"

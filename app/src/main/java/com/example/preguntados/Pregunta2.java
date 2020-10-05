@@ -112,6 +112,8 @@ public class Pregunta2 extends AppCompatActivity implements View.OnClickListener
             default:
         }
         i.putExtra("puntuacion",puntuacion);
+        System.out.print("Puntuacion: ");
+        System.out.println(puntuacion);
     }
 
     @Override
@@ -119,15 +121,4 @@ public class Pregunta2 extends AppCompatActivity implements View.OnClickListener
         return super.onCreateOptionsMenu(menu);
     }
 
-    public void bloquearBoton(){
-        a.setBackgroundColor(Color.GREEN);
-        b.setBackgroundColor(Color.RED);
-        c.setBackgroundColor(Color.RED);
-        d.setBackgroundColor(Color.RED);
-        a.setEnabled(false);
-        b.setEnabled(false);
-        c.setEnabled(false);
-        d.setEnabled(false);
-        sig.setEnabled(true);
-    }
 }

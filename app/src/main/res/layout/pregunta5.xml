@@ -9,7 +9,7 @@
     tools:context=".Pregunta5">
 
     <TextView
-        android:id="@+id/enunciado1"
+        android:id="@+id/pregunta5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="¿Quiénes son los personajes que aprecen la siguiente imagen?"

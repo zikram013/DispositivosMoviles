@@ -15,13 +15,14 @@ import static android.graphics.BlendMode.COLOR;
 public class Pregunta5 extends AppCompatActivity implements View.OnClickListener {
     private Button a,b,c,d,sig,atras;
     private int puntuacion=0;
-    private Intent i,vueltaAtras;
+    private Intent i,recibe,vueltaAtras;
+    private Bundle bolsa;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.pregunta1);
-        i=new Intent(Pregunta5.this,MainActivity.class);
+        setContentView(R.layout.pregunta5);
+        vueltaAtras=new Intent(Pregunta5.this,MainActivity.class);
         vueltaAtras=new Intent(Pregunta5.this,MainActivity.class);
         a= findViewById(R.id.respuesta1);
         b= findViewById(R.id.respuesta2);
@@ -31,7 +32,14 @@ public class Pregunta5 extends AppCompatActivity implements View.OnClickListener
         sig.setVisibility(View.INVISIBLE);
         atras=findViewById(R.id.volver);
         atras.setVisibility(View.INVISIBLE);
+        try{
 
+        }catch (Exception e){
+            Toast.makeText(this,"Error al recibir datos",Toast.LENGTH_SHORT).show();
+        }
+        recibe=getIntent();
+        bolsa=recibe.getExtras();
+        puntuacion=bolsa.getInt("calificacion");
         a.setOnClickListener(this);
         b.setOnClickListener(this);
         c.setOnClickListener(this);
@@ -40,6 +48,7 @@ public class Pregunta5 extends AppCompatActivity implements View.OnClickListener
         sig.setOnClickListener(this);
         sig.setEnabled(false);
         atras.setEnabled(false);
+
     }
 
     @Override
@@ -103,6 +112,8 @@ public class Pregunta5 extends AppCompatActivity implements View.OnClickListener
             default:
         }
         i.putExtra("puntuacion",puntuacion);
+        System.out.print("Puntuacion: ");
+        System.out.println(puntuacion);
     }
 
     @Override
@@ -110,15 +121,4 @@ public class Pregunta5 extends AppCompatActivity implements View.OnClickListener
         return super.onCreateOptionsMenu(menu);
     }
 
-    public void bloquearBoton(){
-        a.setBackgroundColor(Color.RED);
-        b.setBackgroundColor(Color.RED);
-        c.setBackgroundColor(Color.RED);
-        d.setBackgroundColor(Color.GREEN);
-        a.setEnabled(false);
-        b.setEnabled(false);
-        c.setEnabled(false);
-        d.setEnabled(false);
-        sig.setEnabled(true);
-    }
 }
