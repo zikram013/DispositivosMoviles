@@ -46,64 +46,69 @@ public class Pregunta1 extends AppCompatActivity implements View.OnClickListener
     public void onClick(View arg0){
         switch (arg0.getId()){
             case R.id.respuesta1:
-                puntuacion=0;
+                puntuacion= puntuacion-2;
                 a.setBackgroundColor(Color.RED);
                 d.setBackgroundColor(Color.GREEN);
-                sig.setEnabled(true);
-                atras.setEnabled(true);
-                sig.setVisibility(View.VISIBLE);
-                atras.setVisibility(View.VISIBLE);
-                break;
-            case R.id.respuesta3:
-                puntuacion=0;
-                c.setBackgroundColor(Color.RED);
-                d.setBackgroundColor(Color.GREEN);
+                a.setEnabled(false);
+                b.setEnabled(false);
+                c.setEnabled(false);
+                d.setEnabled(false);
                 sig.setEnabled(true);
                 atras.setEnabled(true);
                 sig.setVisibility(View.VISIBLE);
                 atras.setVisibility(View.VISIBLE);
                 break;
             case R.id.respuesta2:
-                puntuacion=0;
+                puntuacion= puntuacion-2;
                 b.setBackgroundColor(Color.RED);
                 d.setBackgroundColor(Color.GREEN);
+                a.setEnabled(false);
+                b.setEnabled(false);
+                c.setEnabled(false);
+                d.setEnabled(false);
+                sig.setEnabled(true);
+                atras.setEnabled(true);
+                sig.setVisibility(View.VISIBLE);
+                atras.setVisibility(View.VISIBLE);
+                break;
+            case R.id.respuesta3:
+                puntuacion= puntuacion-2;
+                c.setBackgroundColor(Color.RED);
+                d.setBackgroundColor(Color.GREEN);
+                a.setEnabled(false);
+                b.setEnabled(false);
+                c.setEnabled(false);
+                d.setEnabled(false);
                 sig.setEnabled(true);
                 atras.setEnabled(true);
                 sig.setVisibility(View.VISIBLE);
                 atras.setVisibility(View.VISIBLE);
                 break;
             case R.id.respuesta4:
-                puntuacion=1;
+                puntuacion= puntuacion+3;
                 d.setBackgroundColor(Color.GREEN);
+                a.setEnabled(false);
+                b.setEnabled(false);
+                c.setEnabled(false);
+                d.setEnabled(false);
                 sig.setEnabled(true);
                 sig.setVisibility(View.VISIBLE);
-               // atras.setVisibility(View.VISIBLE);
                 break;
             case R.id.siguientePregunta:
                 startActivity(i);
-
+                break;
             case R.id.volver:
                 startActivity(vueltaAtras);
-
+                break;
             default:
         }
+
         i.putExtra("puntuacion",puntuacion);
+        System.out.print("Puntuacion: " + puntuacion);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         return super.onCreateOptionsMenu(menu);
-    }
-
-    public void bloquearBoton(){
-        a.setBackgroundColor(Color.RED);
-        b.setBackgroundColor(Color.RED);
-        c.setBackgroundColor(Color.RED);
-        d.setBackgroundColor(Color.GREEN);
-        a.setEnabled(false);
-        b.setEnabled(false);
-        c.setEnabled(false);
-        d.setEnabled(false);
-        sig.setEnabled(true);
     }
 }

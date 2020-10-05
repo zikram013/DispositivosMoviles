@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="48dp"
-        android:text="@string/protagonistas_de_la_serie_bates_motel"
+        android:text="¿Cómo se llaman los protagonistas de la serie «BATES MOTEL»?"
         tools:layout_editor_absoluteX="0dp"
         tools:ignore="MissingConstraints" />
 

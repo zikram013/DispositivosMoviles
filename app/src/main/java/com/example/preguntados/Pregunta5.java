@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 import static android.graphics.BlendMode.COLOR;
 
-public class Pregunta2 extends AppCompatActivity implements View.OnClickListener {
+public class Pregunta5 extends AppCompatActivity implements View.OnClickListener {
     private Button a,b,c,d,sig,atras;
     private int puntuacion=0;
     private Intent i,recibe,vueltaAtras;
@@ -21,9 +21,9 @@ public class Pregunta2 extends AppCompatActivity implements View.OnClickListener
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.pregunta2);
-        i=new Intent(Pregunta2.this,Pregunta3.class);
-        vueltaAtras=new Intent(Pregunta2.this,MainActivity.class);
+        setContentView(R.layout.pregunta5);
+        i=new Intent(Pregunta5.this,MainActivity.class);
+        vueltaAtras=new Intent(Pregunta5.this,MainActivity.class);
         a= findViewById(R.id.respuesta1);
         b= findViewById(R.id.respuesta2);
         c= findViewById(R.id.respuesta3);
@@ -109,7 +109,6 @@ public class Pregunta2 extends AppCompatActivity implements View.OnClickListener
             case R.id.volver:
                 startActivity(vueltaAtras);
                 break;
-
             default:
         }
         i.putExtra("puntuacion",puntuacion);

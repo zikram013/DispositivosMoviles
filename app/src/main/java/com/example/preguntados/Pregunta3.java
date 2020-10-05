@@ -22,7 +22,7 @@ public class Pregunta3 extends AppCompatActivity implements View.OnClickListener
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pregunta3);
-        i=new Intent(Pregunta3.this,MainActivity.class);
+        i=new Intent(Pregunta3.this,Pregunta4.class);
         vueltaAtras=new Intent(Pregunta3.this,MainActivity.class);
         a= findViewById(R.id.respuesta1);
         b= findViewById(R.id.respuesta2);
@@ -31,6 +31,7 @@ public class Pregunta3 extends AppCompatActivity implements View.OnClickListener
         sig= findViewById(R.id.siguientePregunta);
         atras=findViewById(R.id.volver);
         atras.setVisibility(View.INVISIBLE);
+        sig.setVisibility(View.INVISIBLE);
         try{
 
         }catch (Exception e){
@@ -52,61 +53,71 @@ public class Pregunta3 extends AppCompatActivity implements View.OnClickListener
     @Override
     public void onClick(View arg0){
         switch (arg0.getId()){
-            case R.id.respuesta4:
-                puntuacion+=0;
-                d.setBackgroundColor(Color.RED);
-                a.setBackgroundColor(Color.GREEN);
+            case R.id.respuesta1:
+                puntuacion= puntuacion-2;
+                a.setBackgroundColor(Color.RED);
+                b.setBackgroundColor(Color.GREEN);
+                a.setEnabled(false);
+                b.setEnabled(false);
+                c.setEnabled(false);
+                d.setEnabled(false);
                 sig.setEnabled(true);
                 atras.setEnabled(true);
-                atras.setVisibility(View.VISIBLE);
-                break;
-            case R.id.respuesta3:
-                puntuacion+=0;
-                c.setBackgroundColor(Color.RED);
-                a.setBackgroundColor(Color.GREEN);
-                sig.setEnabled(true);
-                atras.setEnabled(true);
+                sig.setVisibility(View.VISIBLE);
                 atras.setVisibility(View.VISIBLE);
                 break;
             case R.id.respuesta2:
-                puntuacion+=0;
-                b.setBackgroundColor(Color.RED);
-                a.setBackgroundColor(Color.GREEN);
+                puntuacion= puntuacion+3;
+                b.setBackgroundColor(Color.GREEN);
+                a.setEnabled(false);
+                b.setEnabled(false);
+                c.setEnabled(false);
+                d.setEnabled(false);
                 sig.setEnabled(true);
                 atras.setEnabled(true);
+                sig.setVisibility(View.VISIBLE);
+                break;
+            case R.id.respuesta3:
+                puntuacion= puntuacion-2;
+                c.setBackgroundColor(Color.RED);
+                b.setBackgroundColor(Color.GREEN);
+                a.setEnabled(false);
+                b.setEnabled(false);
+                c.setEnabled(false);
+                d.setEnabled(false);
+                sig.setEnabled(true);
+                atras.setEnabled(true);
+                sig.setVisibility(View.VISIBLE);
                 atras.setVisibility(View.VISIBLE);
                 break;
-
-            case R.id.respuesta1:
-                puntuacion+=1;
-                a.setBackgroundColor(Color.GREEN);
+            case R.id.respuesta4:
+                puntuacion= puntuacion-2;
+                d.setBackgroundColor(Color.RED);
+                b.setBackgroundColor(Color.GREEN);
+                a.setEnabled(false);
+                b.setEnabled(false);
+                c.setEnabled(false);
+                d.setEnabled(false);
                 sig.setEnabled(true);
                 atras.setEnabled(true);
-               // atras.setVisibility(View.VISIBLE);
+                sig.setVisibility(View.VISIBLE);
+                atras.setVisibility(View.VISIBLE);
                 break;
             case R.id.siguientePregunta:
                 startActivity(i);
+                break;
             case R.id.volver:
                 startActivity(vueltaAtras);
+                break;
             default:
         }
         i.putExtra("puntuacion",puntuacion);
-    }
+        System.out.print("Puntuacion: " + puntuacion);
+}
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         return super.onCreateOptionsMenu(menu);
     }
 
-    public void bloquearBoton(){
-        a.setBackgroundColor(Color.GREEN);
-        b.setBackgroundColor(Color.RED);
-        c.setBackgroundColor(Color.RED);
-        d.setBackgroundColor(Color.RED);
-        a.setEnabled(false);
-        b.setEnabled(false);
-        c.setEnabled(false);
-        d.setEnabled(false);
-        sig.setEnabled(true);
-    }
 }
