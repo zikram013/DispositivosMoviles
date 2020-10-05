@@ -36,6 +36,7 @@ public class Pregunta1 extends AppCompatActivity implements View.OnClickListener
         b.setOnClickListener(this);
         c.setOnClickListener(this);
         d.setOnClickListener(this);
+        atras.setOnClickListener(this);
         sig.setOnClickListener(this);
         sig.setEnabled(false);
         atras.setEnabled(false);
@@ -45,10 +46,26 @@ public class Pregunta1 extends AppCompatActivity implements View.OnClickListener
     public void onClick(View arg0){
         switch (arg0.getId()){
             case R.id.respuesta1:
-            case R.id.respuesta3:
-            case R.id.respuesta2:
                 puntuacion=0;
                 a.setBackgroundColor(Color.RED);
+                d.setBackgroundColor(Color.GREEN);
+                sig.setEnabled(true);
+                atras.setEnabled(true);
+                sig.setVisibility(View.VISIBLE);
+                atras.setVisibility(View.VISIBLE);
+                break;
+            case R.id.respuesta3:
+                puntuacion=0;
+                c.setBackgroundColor(Color.RED);
+                d.setBackgroundColor(Color.GREEN);
+                sig.setEnabled(true);
+                atras.setEnabled(true);
+                sig.setVisibility(View.VISIBLE);
+                atras.setVisibility(View.VISIBLE);
+                break;
+            case R.id.respuesta2:
+                puntuacion=0;
+                b.setBackgroundColor(Color.RED);
                 d.setBackgroundColor(Color.GREEN);
                 sig.setEnabled(true);
                 atras.setEnabled(true);
@@ -64,10 +81,10 @@ public class Pregunta1 extends AppCompatActivity implements View.OnClickListener
                 break;
             case R.id.siguientePregunta:
                 startActivity(i);
-                break;
+
             case R.id.volver:
                 startActivity(vueltaAtras);
-                break;
+
             default:
         }
         i.putExtra("puntuacion",puntuacion);
