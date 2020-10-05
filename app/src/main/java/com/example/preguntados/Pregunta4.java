@@ -12,39 +12,32 @@ import android.widget.Toast;
 
 import static android.graphics.BlendMode.COLOR;
 
-public class Pregunta3 extends AppCompatActivity implements View.OnClickListener {
+public class Pregunta4 extends AppCompatActivity implements View.OnClickListener {
     private Button a,b,c,d,sig,atras;
     private int puntuacion=0;
-    private Intent i,recibe,vueltaAtras;
-    private Bundle bolsa;
+    private Intent i,vueltaAtras;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.pregunta3);
-        i=new Intent(Pregunta3.this,Pregunta4.class);
-        vueltaAtras=new Intent(Pregunta3.this,MainActivity.class);
+        setContentView(R.layout.pregunta1);
+        i=new Intent(Pregunta4.this,Pregunta5.class);
+        vueltaAtras=new Intent(Pregunta4.this,MainActivity.class);
         a= findViewById(R.id.respuesta1);
         b= findViewById(R.id.respuesta2);
         c= findViewById(R.id.respuesta3);
         d= findViewById(R.id.respuesta4);
         sig= findViewById(R.id.siguientePregunta);
+        sig.setVisibility(View.INVISIBLE);
         atras=findViewById(R.id.volver);
         atras.setVisibility(View.INVISIBLE);
-        try{
 
-        }catch (Exception e){
-            Toast.makeText(this,"Error al recibir datos",Toast.LENGTH_SHORT).show();
-        }
-        recibe=getIntent();
-        bolsa=recibe.getExtras();
-        puntuacion=bolsa.getInt("calificacion");
         a.setOnClickListener(this);
         b.setOnClickListener(this);
         c.setOnClickListener(this);
         d.setOnClickListener(this);
-        sig.setOnClickListener(this);
         atras.setOnClickListener(this);
+        sig.setOnClickListener(this);
         sig.setEnabled(false);
         atras.setEnabled(false);
     }
@@ -55,7 +48,7 @@ public class Pregunta3 extends AppCompatActivity implements View.OnClickListener
             case R.id.respuesta1:
                 puntuacion= puntuacion-2;
                 a.setBackgroundColor(Color.RED);
-                b.setBackgroundColor(Color.GREEN);
+                d.setBackgroundColor(Color.GREEN);
                 a.setEnabled(false);
                 b.setEnabled(false);
                 c.setEnabled(false);
@@ -66,8 +59,9 @@ public class Pregunta3 extends AppCompatActivity implements View.OnClickListener
                 atras.setVisibility(View.VISIBLE);
                 break;
             case R.id.respuesta2:
-                puntuacion= puntuacion+3;
-                b.setBackgroundColor(Color.GREEN);
+                puntuacion= puntuacion-2;
+                b.setBackgroundColor(Color.RED);
+                d.setBackgroundColor(Color.GREEN);
                 a.setEnabled(false);
                 b.setEnabled(false);
                 c.setEnabled(false);
@@ -75,11 +69,12 @@ public class Pregunta3 extends AppCompatActivity implements View.OnClickListener
                 sig.setEnabled(true);
                 atras.setEnabled(true);
                 sig.setVisibility(View.VISIBLE);
+                atras.setVisibility(View.VISIBLE);
                 break;
             case R.id.respuesta3:
                 puntuacion= puntuacion-2;
                 c.setBackgroundColor(Color.RED);
-                b.setBackgroundColor(Color.GREEN);
+                d.setBackgroundColor(Color.GREEN);
                 a.setEnabled(false);
                 b.setEnabled(false);
                 c.setEnabled(false);
@@ -90,16 +85,14 @@ public class Pregunta3 extends AppCompatActivity implements View.OnClickListener
                 atras.setVisibility(View.VISIBLE);
                 break;
             case R.id.respuesta4:
-                puntuacion= puntuacion-2;
-                d.setBackgroundColor(Color.RED);
-                b.setBackgroundColor(Color.GREEN);
+                puntuacion= puntuacion+3;
+                d.setBackgroundColor(Color.GREEN);
                 a.setEnabled(false);
                 b.setEnabled(false);
                 c.setEnabled(false);
                 d.setEnabled(false);
                 sig.setEnabled(true);
                 sig.setVisibility(View.VISIBLE);
-                atras.setVisibility(View.VISIBLE);
                 break;
             case R.id.siguientePregunta:
                 startActivity(i);
@@ -118,10 +111,10 @@ public class Pregunta3 extends AppCompatActivity implements View.OnClickListener
     }
 
     public void bloquearBoton(){
-        a.setBackgroundColor(Color.GREEN);
+        a.setBackgroundColor(Color.RED);
         b.setBackgroundColor(Color.RED);
         c.setBackgroundColor(Color.RED);
-        d.setBackgroundColor(Color.RED);
+        d.setBackgroundColor(Color.GREEN);
         a.setEnabled(false);
         b.setEnabled(false);
         c.setEnabled(false);

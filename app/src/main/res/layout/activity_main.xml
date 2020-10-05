@@ -13,7 +13,7 @@
         android:id="@+id/iniciarJuego"
         android:layout_width="match_parent"
         android:layout_height="78dp"
-        android:text="@string/si_sabes_de_series_adelante"
+        android:text="SI SABES DE SERIES, ¡ADELANTE!"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="-14dp"
         tools:layout_editor_absoluteY="328dp" />

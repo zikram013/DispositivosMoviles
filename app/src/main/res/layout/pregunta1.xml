@@ -12,7 +12,7 @@
         android:id="@+id/enunciado1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/secuencia_n_merica_de_la_serie_lost"
+        android:text="¿Cuál es la famosa secuencia de números que ha de ser introducida en el ordenador del búnker en la serie de «PERDIDOS»?"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="177dp" />
@@ -21,7 +21,7 @@
         android:id="@+id/respuesta1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/_4_8_10_23_36_56"
+        android:text="4 8 10 23 36 56"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="242dp" />
