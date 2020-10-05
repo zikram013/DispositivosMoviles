@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Preguntados</string>
+    <string name="si_sabes_de_series_adelante">Si sabes de series, !ADELANTE¡</string>
+    <string name="secuencia_n_merica_de_la_serie_lost">Secuencia númerica de la serie Lost</string>
+    <string name="_4_8_10_23_36_56">4 8 10 23 36 56</string>
+    <string name="_4_8_15_18_37_56">4 8 15 18 37 56</string>
+    <string name="_4_8_15_16_23_32">4 8 15 16 23 32</string>
+    <string name="_4_8_15_16_23_42">4 8 15 16 23 42</string>
+    <string name="siguiente">Siguiente</string>
+    <string name="protagonistas_de_la_serie_bates_motel">Protagonistas de la serie Bates Motel</string>
+    <string name="norma_y_norman_bates">Norma y Norman Bates</string>
+    <string name="wendy_y_billy_hudson">Wendy y Billy Hudson</string>
+    <string name="alice_y_alex_romero">Alice y Alex Romero</string>
+    <string name="mandy_y_bob_motel">Mandy y Bob Motel</string>
 </resources>
