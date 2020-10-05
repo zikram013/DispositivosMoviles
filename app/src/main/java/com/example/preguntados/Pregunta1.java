@@ -13,20 +13,24 @@ import android.widget.Toast;
 import static android.graphics.BlendMode.COLOR;
 
 public class Pregunta1 extends AppCompatActivity implements View.OnClickListener {
-    private Button a,b,c,d,sig;
+    private Button a,b,c,d,sig,atras;
     private int puntuacion=0;
-    private Intent i;
+    private Intent i,vueltaAtras;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pregunta1);
         i=new Intent(Pregunta1.this,Pregunta2.class);
+        vueltaAtras=new Intent(Pregunta1.this,MainActivity.class);
         a= findViewById(R.id.respuesta1);
         b= findViewById(R.id.respuesta2);
         c= findViewById(R.id.respuesta3);
         d= findViewById(R.id.respuesta4);
         sig= findViewById(R.id.siguientePregunta);
+        sig.setVisibility(View.INVISIBLE);
+        atras=findViewById(R.id.volver);
+        atras.setVisibility(View.INVISIBLE);
 
         a.setOnClickListener(this);
         b.setOnClickListener(this);
@@ -34,6 +38,7 @@ public class Pregunta1 extends AppCompatActivity implements View.OnClickListener
         d.setOnClickListener(this);
         sig.setOnClickListener(this);
         sig.setEnabled(false);
+        atras.setEnabled(false);
     }
 
     @Override
@@ -43,14 +48,26 @@ public class Pregunta1 extends AppCompatActivity implements View.OnClickListener
             case R.id.respuesta3:
             case R.id.respuesta2:
                 puntuacion=0;
-                bloquearBoton();
+                a.setBackgroundColor(Color.RED);
+                d.setBackgroundColor(Color.GREEN);
+                sig.setEnabled(true);
+                atras.setEnabled(true);
+                sig.setVisibility(View.VISIBLE);
+                atras.setVisibility(View.VISIBLE);
                 break;
             case R.id.respuesta4:
                 puntuacion=1;
-                bloquearBoton();
+                d.setBackgroundColor(Color.GREEN);
+                sig.setEnabled(true);
+                sig.setVisibility(View.VISIBLE);
+               // atras.setVisibility(View.VISIBLE);
                 break;
             case R.id.siguientePregunta:
                 startActivity(i);
+                break;
+            case R.id.volver:
+                startActivity(vueltaAtras);
+                break;
             default:
         }
         i.putExtra("puntuacion",puntuacion);

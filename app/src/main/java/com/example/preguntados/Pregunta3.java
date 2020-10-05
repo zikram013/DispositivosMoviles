@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 import static android.graphics.BlendMode.COLOR;
 
-public class Pregunta2 extends AppCompatActivity implements View.OnClickListener {
+public class Pregunta3 extends AppCompatActivity implements View.OnClickListener {
     private Button a,b,c,d,sig,atras;
     private int puntuacion=0;
     private Intent i,recibe,vueltaAtras;
@@ -21,15 +21,14 @@ public class Pregunta2 extends AppCompatActivity implements View.OnClickListener
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.pregunta2);
-        i=new Intent(Pregunta2.this,Pregunta3.class);
-        vueltaAtras=new Intent(Pregunta2.this,MainActivity.class);
+        setContentView(R.layout.pregunta3);
+        i=new Intent(Pregunta3.this,MainActivity.class);
+        vueltaAtras=new Intent(Pregunta3.this,MainActivity.class);
         a= findViewById(R.id.respuesta1);
         b= findViewById(R.id.respuesta2);
         c= findViewById(R.id.respuesta3);
         d= findViewById(R.id.respuesta4);
         sig= findViewById(R.id.siguientePregunta);
-        sig.setVisibility(View.INVISIBLE);
         atras=findViewById(R.id.volver);
         atras.setVisibility(View.INVISIBLE);
         try{
@@ -45,9 +44,9 @@ public class Pregunta2 extends AppCompatActivity implements View.OnClickListener
         c.setOnClickListener(this);
         d.setOnClickListener(this);
         sig.setOnClickListener(this);
+        atras.setOnClickListener(this);
         sig.setEnabled(false);
         atras.setEnabled(false);
-
     }
 
     @Override
@@ -61,7 +60,6 @@ public class Pregunta2 extends AppCompatActivity implements View.OnClickListener
                 a.setBackgroundColor(Color.GREEN);
                 sig.setEnabled(true);
                 atras.setEnabled(true);
-                sig.setVisibility(View.VISIBLE);
                 atras.setVisibility(View.VISIBLE);
                 break;
 
@@ -69,12 +67,11 @@ public class Pregunta2 extends AppCompatActivity implements View.OnClickListener
                 puntuacion+=1;
                 a.setBackgroundColor(Color.GREEN);
                 sig.setEnabled(true);
-                sig.setVisibility(View.VISIBLE);
-              //  atras.setVisibility(View.VISIBLE);
+                atras.setEnabled(true);
+               // atras.setVisibility(View.VISIBLE);
                 break;
             case R.id.siguientePregunta:
                 startActivity(i);
-                break;
             case R.id.volver:
                 startActivity(vueltaAtras);
                 break;
