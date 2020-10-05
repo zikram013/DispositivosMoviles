@@ -11,7 +11,7 @@
 
     <Button
         android:id="@+id/iniciarJuego"
-        android:layout_width="425dp"
+        android:layout_width="match_parent"
         android:layout_height="78dp"
         android:text="@string/si_sabes_de_series_adelante"
         tools:ignore="MissingConstraints"

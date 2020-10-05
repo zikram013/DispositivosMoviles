@@ -9,7 +9,7 @@
     tools:context=".Pregunta1">
 
     <TextView
-        android:id="@+id/pregunta1"
+        android:id="@+id/enunciado1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/secuencia_n_merica_de_la_serie_lost"
@@ -18,7 +18,7 @@
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/respuesta1a"
+        android:id="@+id/respuesta1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/_4_8_10_23_36_56"
