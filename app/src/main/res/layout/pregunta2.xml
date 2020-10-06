@@ -106,11 +106,11 @@
         android:background="#4CAF50"
         android:text="@string/siguiente"
         android:textColor="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/volver"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.729"
+        app:layout_constraintVertical_bias="0.936"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="14dp" />
+        tools:layout_editor_absoluteX="-16dp" />
 
     <Button
         android:id="@+id/volver"
