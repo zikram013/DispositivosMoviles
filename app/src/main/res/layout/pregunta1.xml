@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -16,9 +16,11 @@
         android:layout_x="0dp"
         android:layout_y="187dp"
         android:text="¿Cuál es la famosa secuencia de números que ha de ser introducida en el ordenador del búnker en la serie de «PERDIDOS»?"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.297"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="177dp" />
+        tools:layout_editor_absoluteX="0dp" />
 
     <Button
         android:id="@+id/respuesta1"
@@ -29,9 +31,11 @@
         android:background="#009688"
         android:text="@string/_4_8_10_23_36_56"
         android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pregunta1"
+        app:layout_constraintVertical_bias="0.125"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="242dp" />
+        tools:layout_editor_absoluteX="1dp" />
 
     <Button
         android:id="@+id/respuesta2"
@@ -42,9 +46,11 @@
         android:background="#009688"
         android:text="@string/_4_8_15_18_37_56"
         android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/respuesta1"
+        app:layout_constraintVertical_bias="0.068"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="321dp" />
+        tools:layout_editor_absoluteX="0dp" />
 
     <Button
         android:id="@+id/respuesta3"
@@ -55,9 +61,11 @@
         android:background="#009688"
         android:text="@string/_4_8_15_16_23_32"
         android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/respuesta4"
+        app:layout_constraintTop_toBottomOf="@+id/respuesta2"
+        app:layout_constraintVertical_bias="0.527"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="402dp" />
+        tools:layout_editor_absoluteX="-4dp" />
 
     <Button
         android:id="@+id/respuesta4"
@@ -68,31 +76,40 @@
         android:background="#009688"
         android:text="@string/_4_8_15_16_23_42"
         android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/siguientePregunta"
+        app:layout_constraintTop_toBottomOf="@+id/pregunta1"
+        app:layout_constraintVertical_bias="0.928"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="-32dp"
-        tools:layout_editor_absoluteY="491dp" />
+        tools:layout_editor_absoluteX="0dp" />
 
     <Button
         android:id="@+id/siguientePregunta"
         android:layout_width="411dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:layout_x="0dp"
         android:layout_y="567dp"
         android:background="#4CAF50"
         android:text="@string/siguiente"
         android:textColor="@android:color/white"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintBottom_toTopOf="@+id/volver"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
 
     <Button
         android:id="@+id/volver"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_x="-1dp"
-        android:layout_y="625dp"
-        android:text="@string/volver"
+        android:layout_x="0dp"
+        android:layout_y="567dp"
         android:background="#4CAF50"
+        android:text="@string/volver"
         android:textColor="@android:color/white"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.938"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
 
 
-</AbsoluteLayout>
+</android.support.constraint.ConstraintLayout>
