@@ -16,8 +16,7 @@ import android.widget.Toast;
 import static android.graphics.BlendMode.COLOR;
 
 public class Pregunta2 extends AppCompatActivity implements View.OnClickListener {
-    private RadioButton a,b,c,d;
-    private Button sig,atras;
+    private Button a,b,c,d,sig,atras;
     private int puntuacion=0;
     private Intent i,recibe,vueltaAtras;
     private Bundle bolsa;

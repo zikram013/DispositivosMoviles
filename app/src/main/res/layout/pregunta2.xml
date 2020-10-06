@@ -15,16 +15,16 @@
         android:layout_height="46dp"
         android:layout_x="-1dp"
         android:layout_y="223dp"
+        android:gravity="center_horizontal"
         android:text="¿Cómo se llaman los protagonistas de la serie «BATES MOTEL»?"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/respuesta1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.216"
-        tools:ignore="MissingConstraints"
-        android:textAlignment="center"
-        android:gravity="center_horizontal"/>
+        app:layout_constraintVertical_bias="0.773"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/puntuacionFinal"
@@ -40,64 +40,67 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.064" />
 
-    <RadioButton
-        android:id="@+id/respuesta4"
-        android:layout_width="197dp"
-        android:layout_height="33dp"
-        android:layout_x="11dp"
-        android:layout_y="422dp"
-        android:onClick="onRadioButtonClicked"
-        android:text="Mandy y Bob Motel"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.575"
-        tools:ignore="OnClick" />
-
-    <RadioButton
-        android:id="@+id/respuesta3"
-        android:layout_width="197dp"
-        android:layout_height="33dp"
-        android:layout_x="7dp"
-        android:layout_y="369dp"
-        android:onClick="onRadioButtonClicked"
-        android:text="Alice y Alex Romero"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="OnClick" />
-
-    <RadioButton
-        android:id="@+id/respuesta2"
-        android:layout_width="197dp"
-        android:layout_height="33dp"
-        android:layout_x="9dp"
-        android:layout_y="323dp"
-        android:onClick="onRadioButtonClicked"
-        android:text="Wendy y Billy Hudson"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.422"
-        tools:ignore="OnClick" />
-
-    <RadioButton
+    <Button
         android:id="@+id/respuesta1"
-        android:layout_width="197dp"
-        android:layout_height="33dp"
-        android:layout_x="9dp"
-        android:layout_y="271dp"
-        android:onClick="onRadioButtonClicked"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_x="0dp"
+        android:layout_y="303dp"
+        android:background="#009688"
         android:text="Norma y Norman Bates"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/respuesta2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.922"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/respuesta2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_x="-2dp"
+        android:layout_y="362dp"
+        android:background="#009688"
+        android:text="Wendy y Billy Hudson"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/respuesta3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.933"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <Button
+        android:id="@+id/respuesta3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_x="0dp"
+        android:layout_y="418dp"
+        android:background="#009688"
+        android:text="Alice y Alex Romero"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/respuesta4"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.346"
-        tools:ignore="OnClick" />
+        app:layout_constraintVertical_bias="0.941"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/respuesta4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_x="-1dp"
+        android:layout_y="479dp"
+        android:background="#009688"
+        android:text="Mandy y Bob Motel"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/siguientePregunta"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.94"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
 
     <Button
         android:id="@+id/siguientePregunta"
