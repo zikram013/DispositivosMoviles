@@ -18,10 +18,10 @@
         android:text="¿Qué Pokémon tiene más debilidades?"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.592"
+        app:layout_constraintHorizontal_bias="0.628"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.172"
+        app:layout_constraintVertical_bias="0.148"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -33,97 +33,108 @@
         android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.124"
+        app:layout_constraintHorizontal_bias="0.131"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.082" />
+        app:layout_constraintVertical_bias="0.043" />
 
     <ImageButton
         android:id="@+id/respuesta1"
-        android:layout_width="181dp"
-        android:layout_height="116dp"
+        android:layout_width="176dp"
+        android:layout_height="111dp"
         android:layout_row="2"
         android:layout_column="0"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="68dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="48dp"
         android:layout_x="28dp"
         android:layout_y="146dp"
         android:contentDescription="@string/hydreigon"
         app:layout_constraintBottom_toTopOf="@+id/respuesta3"
         app:layout_constraintEnd_toStartOf="@+id/respuesta2"
+        app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/hydreigon"
         tools:ignore="MissingConstraints" />
 
     <ImageButton
         android:id="@+id/respuesta2"
-        android:layout_width="173dp"
-        android:layout_height="118dp"
+        android:layout_width="166dp"
+        android:layout_height="115dp"
         android:layout_row="2"
         android:layout_column="1"
-        android:layout_marginBottom="64dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginBottom="52dp"
         android:layout_x="215dp"
         android:layout_y="144dp"
         android:contentDescription="@string/charizard"
         app:layout_constraintBottom_toTopOf="@+id/respuesta4"
+        app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/charizard"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="222dp" />
+        tools:ignore="MissingConstraints" />
 
     <ImageButton
         android:id="@+id/respuesta3"
         android:layout_width="184dp"
-        android:layout_height="121dp"
+        android:layout_height="128dp"
         android:layout_row="3"
         android:layout_column="2"
-        android:layout_marginEnd="12dp"
-        android:layout_marginRight="12dp"
-        android:layout_marginBottom="104dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="28dp"
         android:layout_x="26dp"
         android:layout_y="340dp"
         android:contentDescription="@string/umbreon"
         app:layout_constraintBottom_toTopOf="@+id/siguientePregunta"
         app:layout_constraintEnd_toStartOf="@+id/respuesta4"
+        app:layout_constraintHorizontal_bias="0.346"
+        app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/umbreon"
         tools:ignore="MissingConstraints" />
 
     <ImageButton
         android:id="@+id/respuesta4"
-        android:layout_width="182dp"
-        android:layout_height="126dp"
+        android:layout_width="170dp"
+        android:layout_height="128dp"
         android:layout_row="4"
         android:layout_column="0"
-        android:layout_marginBottom="100dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="20dp"
         android:layout_x="209dp"
         android:layout_y="339dp"
         android:contentDescription="@string/articuno"
         app:layout_constraintBottom_toTopOf="@+id/volver"
+        app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/articuno"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="213dp" />
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/siguientePregunta"
         android:layout_width="158dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="52dp"
+        android:layout_marginBottom="124dp"
         android:layout_x="33dp"
         android:layout_y="536dp"
         android:text="@string/siguiente"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="38dp" />
+        app:layout_constraintEnd_toStartOf="@+id/volver"
+        app:layout_constraintHorizontal_bias="0.371"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/volver"
         android:layout_width="155dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="52dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="124dp"
         android:layout_x="217dp"
         android:layout_y="535dp"
         android:text="@string/volver"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="239dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints" />
 
 </android.support.constraint.ConstraintLayout>
