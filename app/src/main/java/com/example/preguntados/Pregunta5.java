@@ -41,6 +41,7 @@ public class Pregunta5 extends AppCompatActivity implements View.OnClickListener
         }
         recibe=getIntent();
         bolsa=recibe.getExtras();
+        assert bolsa != null;
         puntuacion=bolsa.getInt("puntuacion");
         a.setOnClickListener(this);
         b.setOnClickListener(this);

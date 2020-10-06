@@ -9,12 +9,20 @@
     tools:ignore="Deprecated">
 
     <pl.droidsonroids.gif.GifImageView
-        android:id="@+id/imageView"
+        android:id="@+id/buenaPuntuacion"
         android:layout_width="358dp"
         android:layout_height="215dp"
         android:layout_x="16dp"
         android:layout_y="228dp"
         android:src="@drawable/congrats" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/malaPuntuacion"
+        android:layout_width="358dp"
+        android:layout_height="215dp"
+        android:layout_x="16dp"
+        android:layout_y="228dp"
+        android:src="@drawable/malo" />
 
     <Button
         android:id="@+id/volver"
@@ -23,4 +31,12 @@
         android:layout_x="37dp"
         android:layout_y="502dp"
         android:text="@string/volver"/>
+
+    <TextView
+        android:id="@+id/puntuacionFinal"
+        android:layout_width="318dp"
+        android:layout_height="wrap_content"
+        android:layout_x="29dp"
+        android:layout_y="172dp"
+        android:text="" />
 </AbsoluteLayout>
