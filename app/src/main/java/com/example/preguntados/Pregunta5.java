@@ -24,7 +24,7 @@ public class Pregunta5 extends AppCompatActivity implements View.OnClickListener
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.preguntaimagen);
-        i=new Intent(Pregunta5.this,MainActivity.class);
+        i=new Intent(Pregunta5.this,FinDeJuego.class);
         vueltaAtras=new Intent(Pregunta5.this,MainActivity.class);
         a= findViewById(R.id.respuesta1);
         b= findViewById(R.id.respuesta2);
