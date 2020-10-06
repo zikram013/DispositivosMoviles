@@ -18,9 +18,9 @@
         android:text="¿Cuál es la famosa secuencia de números que ha de ser introducida en el ordenador del búnker en la serie de «PERDIDOS»?"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.297"
+        app:layout_constraintVertical_bias="0.234"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp" />
+        tools:layout_editor_absoluteX="-2dp" />
 
     <Button
         android:id="@+id/respuesta1"
@@ -32,10 +32,10 @@
         android:text="@string/_4_8_10_23_36_56"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pregunta1"
-        app:layout_constraintVertical_bias="0.125"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.358"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="1dp" />
+        tools:layout_editor_absoluteX="0dp" />
 
     <Button
         android:id="@+id/respuesta2"
@@ -47,25 +47,27 @@
         android:text="@string/_4_8_15_18_37_56"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/respuesta1"
-        app:layout_constraintVertical_bias="0.068"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.472"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp" />
 
     <Button
         android:id="@+id/respuesta3"
-        android:layout_width="415dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_x="0dp"
         android:layout_y="418dp"
         android:background="#009688"
         android:text="@string/_4_8_15_16_23_32"
         android:textColor="@android:color/white"
-        app:layout_constraintBottom_toTopOf="@+id/respuesta4"
-        app:layout_constraintTop_toBottomOf="@+id/respuesta2"
-        app:layout_constraintVertical_bias="0.527"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="-4dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.584"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/respuesta4"
@@ -76,9 +78,9 @@
         android:background="#009688"
         android:text="@string/_4_8_15_16_23_42"
         android:textColor="@android:color/white"
-        app:layout_constraintBottom_toTopOf="@+id/siguientePregunta"
-        app:layout_constraintTop_toBottomOf="@+id/pregunta1"
-        app:layout_constraintVertical_bias="0.928"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.696"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp" />
 
@@ -86,13 +88,14 @@
         android:id="@+id/siguientePregunta"
         android:layout_width="411dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
         android:layout_x="0dp"
         android:layout_y="567dp"
         android:background="#4CAF50"
         android:text="@string/siguiente"
         android:textColor="@android:color/white"
-        app:layout_constraintBottom_toTopOf="@+id/volver"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.805"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp" />
 
@@ -107,7 +110,7 @@
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.938"
+        app:layout_constraintVertical_bias="0.894"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp" />
 
