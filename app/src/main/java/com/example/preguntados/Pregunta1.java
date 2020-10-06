@@ -1,13 +1,18 @@
 package com.example.preguntados;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.PopupWindow;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import static android.graphics.BlendMode.COLOR;
@@ -17,12 +22,16 @@ public class Pregunta1 extends AppCompatActivity implements View.OnClickListener
     private int puntuacion=0;
     private Intent i,vueltaAtras;
 
+
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pregunta1);
         i=new Intent(Pregunta1.this,Pregunta2.class);
         vueltaAtras=new Intent(Pregunta1.this,MainActivity.class);
+
+
         a= findViewById(R.id.respuesta1);
         b= findViewById(R.id.respuesta2);
         c= findViewById(R.id.respuesta3);
@@ -42,6 +51,7 @@ public class Pregunta1 extends AppCompatActivity implements View.OnClickListener
         atras.setEnabled(false);
     }
 
+    @SuppressLint("WrongConstant")
     @Override
     public void onClick(View arg0){
         switch (arg0.getId()){
@@ -57,6 +67,7 @@ public class Pregunta1 extends AppCompatActivity implements View.OnClickListener
                 atras.setEnabled(true);
                 sig.setVisibility(View.VISIBLE);
                 atras.setVisibility(View.VISIBLE);
+                Toast.makeText(this,"Respuesta incorrecta -2 puntos",5).show();
                 break;
             case R.id.respuesta2:
                 puntuacion= puntuacion-2;
@@ -70,6 +81,7 @@ public class Pregunta1 extends AppCompatActivity implements View.OnClickListener
                 atras.setEnabled(true);
                 sig.setVisibility(View.VISIBLE);
                 atras.setVisibility(View.VISIBLE);
+                Toast.makeText(this,"Respuesta incorrecta -2 puntos",5).show();
                 break;
             case R.id.respuesta3:
                 puntuacion= puntuacion-2;
@@ -83,6 +95,7 @@ public class Pregunta1 extends AppCompatActivity implements View.OnClickListener
                 atras.setEnabled(true);
                 sig.setVisibility(View.VISIBLE);
                 atras.setVisibility(View.VISIBLE);
+                Toast.makeText(this,"Respuesta incorrecta -2 puntos",5).show();
                 break;
             case R.id.respuesta4:
                 puntuacion= puntuacion+3;
@@ -93,6 +106,7 @@ public class Pregunta1 extends AppCompatActivity implements View.OnClickListener
                 d.setEnabled(false);
                 sig.setEnabled(true);
                 sig.setVisibility(View.VISIBLE);
+                Toast.makeText(this,"Respuesta correcta +3 puntos",5).show();
                 break;
             case R.id.siguientePregunta:
                 startActivity(i);
