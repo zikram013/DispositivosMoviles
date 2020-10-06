@@ -18,10 +18,10 @@
         android:text="¿Qué Pokémon tiene más debilidades?"
         app:layout_constraintBottom_toTopOf="@+id/respuesta1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.782"
+        app:layout_constraintVertical_bias="0.947"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -33,10 +33,10 @@
         android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.131"
+        app:layout_constraintHorizontal_bias="0.12"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.11" />
+        app:layout_constraintVertical_bias="0.039" />
 
     <ImageButton
         android:id="@+id/respuesta1"
@@ -52,7 +52,7 @@
         android:contentDescription="@string/hydreigon"
         app:layout_constraintBottom_toTopOf="@+id/respuesta3"
         app:layout_constraintEnd_toStartOf="@+id/respuesta2"
-        app:layout_constraintHorizontal_bias="0.698"
+        app:layout_constraintHorizontal_bias="0.922"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/hydreigon"
         tools:ignore="MissingConstraints" />
@@ -120,7 +120,7 @@
         android:id="@+id/siguientePregunta"
         android:layout_width="158dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="48dp"
         android:layout_x="33dp"
         android:layout_y="536dp"
         android:background="#000000"
@@ -128,7 +128,7 @@
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/volver"
-        app:layout_constraintHorizontal_bias="0.293"
+        app:layout_constraintHorizontal_bias="0.725"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
 
@@ -136,9 +136,9 @@
         android:id="@+id/volver"
         android:layout_width="155dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="36dp"
-        android:layout_marginRight="36dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
+        android:layout_marginBottom="48dp"
         android:layout_x="217dp"
         android:layout_y="535dp"
         android:background="#000000"
