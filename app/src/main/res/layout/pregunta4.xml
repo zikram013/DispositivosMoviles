@@ -10,19 +10,19 @@
 
     <TextView
         android:id="@+id/pregunta4"
-        android:layout_width="357dp"
-        android:layout_height="49dp"
+        android:layout_width="341dp"
+        android:layout_height="35dp"
         android:layout_x="13dp"
         android:layout_y="86dp"
+        android:gravity="center_horizontal"
         android:text="¿Quiénes son las personas que aparecen en el siguiente fotograma de la serie «CRÓNICAS VAMPÍRICAS»?"
+        android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.821"
-        tools:ignore="MissingConstraints"
-        android:textAlignment="center"
-        android:gravity="center_horizontal"/>
+        app:layout_constraintVertical_bias="0.971"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/puntuacionFinal"
@@ -33,10 +33,10 @@
         android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.096"
+        app:layout_constraintHorizontal_bias="0.135"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.037" />
+        app:layout_constraintVertical_bias="0.022" />
 
     <RadioGroup
         android:id="@+id/radioGroup3"
@@ -47,9 +47,10 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/siguientePregunta"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.219"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.949"
+        app:layout_constraintVertical_bias="0.979"
         tools:ignore="MissingConstraints">
 
         <RadioButton
@@ -96,9 +97,10 @@
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toTopOf="@+id/volver"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.937"
+        app:layout_constraintVertical_bias="0.966"
         tools:ignore="MissingConstraints" />
 
     <Button
@@ -115,21 +117,22 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.928"
+        app:layout_constraintVertical_bias="0.931"
         tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="355dp"
-        android:layout_height="199dp"
+        android:layout_width="278dp"
+        android:layout_height="150dp"
         android:layout_x="33dp"
         android:layout_y="136dp"
         android:src="@drawable/foto_pregunta4"
         app:layout_constraintBottom_toTopOf="@+id/radioGroup3"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.917"
+        app:layout_constraintVertical_bias="0.961"
         tools:ignore="MissingConstraints" />
 
 </android.support.constraint.ConstraintLayout>
