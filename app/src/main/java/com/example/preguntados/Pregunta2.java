@@ -9,18 +9,21 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import static android.graphics.BlendMode.COLOR;
 
 public class Pregunta2 extends AppCompatActivity implements View.OnClickListener {
-    private Button a,b,c,d,sig,atras;
+    private RadioButton a,b,c,d;
+    private Button sig,atras;
     private int puntuacion=0;
     private Intent i,recibe,vueltaAtras;
     private Bundle bolsa;
     private TextView mostrarPuntuacion;/**/
 
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +47,9 @@ public class Pregunta2 extends AppCompatActivity implements View.OnClickListener
         recibe=getIntent();
         bolsa=recibe.getExtras();
         puntuacion=bolsa.getInt("puntuacion");
+        if(puntuacion<0){
+            puntuacion=0;
+        }
         a.setOnClickListener(this);
         b.setOnClickListener(this);
         c.setOnClickListener(this);

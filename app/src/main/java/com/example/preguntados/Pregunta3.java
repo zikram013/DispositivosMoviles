@@ -41,6 +41,9 @@ public class Pregunta3 extends AppCompatActivity implements View.OnClickListener
         recibe=getIntent();
         bolsa=recibe.getExtras();
         puntuacion=bolsa.getInt("puntuacion");
+        if(puntuacion<0){
+            puntuacion=0;
+        }
         a.setOnClickListener(this);
         b.setOnClickListener(this);
         c.setOnClickListener(this);

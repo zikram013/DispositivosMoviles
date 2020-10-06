@@ -21,6 +21,8 @@ public class Pregunta1 extends AppCompatActivity implements View.OnClickListener
     private Button a,b,c,d,sig,atras;
     private int puntuacion=0;
     private Intent i,vueltaAtras;
+    private TextView mostrarPuntuacion;
+
 
 
     @SuppressLint("WrongViewCast")
@@ -30,7 +32,7 @@ public class Pregunta1 extends AppCompatActivity implements View.OnClickListener
         setContentView(R.layout.pregunta1);
         i=new Intent(Pregunta1.this,Pregunta2.class);
         vueltaAtras=new Intent(Pregunta1.this,MainActivity.class);
-
+        mostrarPuntuacion=findViewById(R.id.puntuacionFinal);
 
         a= findViewById(R.id.respuesta1);
         b= findViewById(R.id.respuesta2);
@@ -49,6 +51,7 @@ public class Pregunta1 extends AppCompatActivity implements View.OnClickListener
         sig.setOnClickListener(this);
         sig.setEnabled(false);
         atras.setEnabled(false);
+        mostrarPuntuacion.setText("Su puntuacion es: " + puntuacion);
     }
 
     @SuppressLint("WrongConstant")
