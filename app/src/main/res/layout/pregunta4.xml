@@ -10,11 +10,11 @@
 
     <TextView
         android:id="@+id/pregunta4"
-        android:layout_width="match_parent"
-        android:layout_height="33dp"
-        android:layout_x="0dp"
-        android:layout_y="304dp"
-        android:text="¿De qué trabaja Joe Goldberg en la serie «YOU»?"
+        android:layout_width="385dp"
+        android:layout_height="wrap_content"
+        android:layout_x="13dp"
+        android:layout_y="86dp"
+        android:text="¿Quiénes son las personas que aparecen en el siguiente fotograma de la serie «CRÓNICAS VAMPÍRICAS»?"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="177dp" />
@@ -31,7 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClicked"
-            android:text="Granjero en Misuri"
+            android:text="Matt, Elena, Niklaus"
             tools:ignore="OnClick" />
 
         <RadioButton
@@ -39,7 +39,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClicked"
-            android:text="Policía en Brooklyn"
+            android:text="Alaric, Hayley, Jeremy"
             tools:ignore="OnClick" />
 
         <RadioButton
@@ -47,7 +47,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClicked"
-            android:text="Médico forense en Los Ángeles"
+            android:text="Stefan, Katherine, Damon"
             tools:ignore="OnClick" />
 
         <RadioButton
@@ -55,7 +55,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClicked"
-            android:text="Gerente de una librería en Nueva York"
+            android:text="Enzo, Bonnie y Damon"
             tools:ignore="OnClick" />
     </RadioGroup>
 
@@ -74,10 +74,19 @@
         android:id="@+id/volver"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_x="-2dp"
-        android:layout_y="622dp"
+        android:layout_x="-1dp"
+        android:layout_y="621dp"
         android:background="#4CAF50"
         android:text="@string/volver"
         android:textColor="@android:color/white"
         tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="355dp"
+        android:layout_height="199dp"
+        android:layout_x="33dp"
+        android:layout_y="136dp"
+        android:src="@drawable/foto_pregunta4" />
+
 </AbsoluteLayout>
