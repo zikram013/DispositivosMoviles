@@ -8,12 +8,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import static android.graphics.BlendMode.COLOR;
 
 public class Pregunta5 extends AppCompatActivity implements View.OnClickListener {
-    private Button a,b,c,d,sig,atras;
+    private Button sig,atras;
+    private ImageButton a,b,c,d;
     private int puntuacion=0;
     private Intent i,recibe,vueltaAtras;
     private Bundle bolsa;
@@ -21,7 +23,7 @@ public class Pregunta5 extends AppCompatActivity implements View.OnClickListener
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.pregunta5);
+        setContentView(R.layout.preguntaimagen);
         i=new Intent(Pregunta5.this,MainActivity.class);
         vueltaAtras=new Intent(Pregunta5.this,MainActivity.class);
         a= findViewById(R.id.respuesta1);

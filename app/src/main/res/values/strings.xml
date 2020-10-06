@@ -13,4 +13,10 @@
     <string name="alice_y_alex_romero">Alice y Alex Romero</string>
     <string name="mandy_y_bob_motel">Mandy y Bob Motel</string>
     <string name="volver">volver</string>
+    <string name="que_pokemon_tiene_menos_debilidades">Que pokemon tiene menos debilidades</string>
+    <string name="que_pokemon_tiene_mas_debilidades">que_pokemon_tiene_mas_debilidades</string>
+    <string name="hydreigon">hydreigon</string>
+    <string name="charizard">charizard</string>
+    <string name="umbreon">umbreon</string>
+    <string name="articuno">articuno</string>
 </resources>
