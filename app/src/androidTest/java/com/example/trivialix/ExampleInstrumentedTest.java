@@ -1,4 +1,4 @@
-package com.example.preguntados;
+package com.example.trivialix;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -20,6 +20,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.example.preguntados", appContext.getPackageName());
+        assertEquals("com.example.trivialix", appContext.getPackageName());
     }
 }

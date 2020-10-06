@@ -1,4 +1,4 @@
-package com.example.preguntados;
+package com.example.trivialix;
 
 import org.junit.Test;
 

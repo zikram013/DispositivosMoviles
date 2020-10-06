@@ -1,4 +1,4 @@
-package com.example.preguntados;
+package com.example.trivialix;
 
 import android.annotation.SuppressLint;
 import android.graphics.Color;
