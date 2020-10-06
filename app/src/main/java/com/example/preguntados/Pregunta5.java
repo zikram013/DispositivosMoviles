@@ -103,6 +103,7 @@ public class Pregunta5 extends AppCompatActivity implements View.OnClickListener
                 c.setEnabled(false);
                 d.setEnabled(false);
                 sig.setEnabled(true);
+                atras.setEnabled(true);
                 sig.setVisibility(View.VISIBLE);
                 atras.setVisibility(View.VISIBLE);
                 break;
