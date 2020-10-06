@@ -50,7 +50,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.542"
+        app:layout_constraintVertical_bias="0.575"
         tools:ignore="OnClick" />
 
     <RadioButton
@@ -65,7 +65,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.495"
         tools:ignore="OnClick" />
 
     <RadioButton
@@ -80,7 +79,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.448"
+        app:layout_constraintVertical_bias="0.422"
         tools:ignore="OnClick" />
 
     <RadioButton
@@ -95,7 +94,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.401"
+        app:layout_constraintVertical_bias="0.346"
         tools:ignore="OnClick" />
 
     <Button

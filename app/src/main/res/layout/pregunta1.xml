@@ -16,9 +16,9 @@
         android:layout_x="0dp"
         android:layout_y="187dp"
         android:text="¿Cuál es la famosa secuencia de números que ha de ser introducida en el ordenador del búnker en la serie de «PERDIDOS»?"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/respuesta1"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.228"
+        app:layout_constraintVertical_bias="0.846"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp" />
 
@@ -31,11 +31,11 @@
         android:background="#009688"
         android:text="@string/_4_8_10_23_36_56"
         android:textColor="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/respuesta2"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.341"
+        app:layout_constraintVertical_bias="0.922"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp" />
+        tools:layout_editor_absoluteX="0dp" />
 
     <Button
         android:id="@+id/respuesta2"
@@ -46,11 +46,11 @@
         android:background="#009688"
         android:text="@string/_4_8_15_18_37_56"
         android:textColor="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/respuesta3"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.436"
+        app:layout_constraintVertical_bias="0.933"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp" />
+        tools:layout_editor_absoluteX="16dp" />
 
     <Button
         android:id="@+id/respuesta3"
@@ -61,12 +61,12 @@
         android:background="#009688"
         android:text="@string/_4_8_15_16_23_32"
         android:textColor="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/respuesta4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.53"
+        app:layout_constraintVertical_bias="0.941"
         tools:ignore="MissingConstraints" />
 
     <Button
@@ -78,11 +78,11 @@
         android:background="#009688"
         android:text="@string/_4_8_15_16_23_42"
         android:textColor="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/siguientePregunta"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.625"
+        app:layout_constraintVertical_bias="0.94"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp" />
+        tools:layout_editor_absoluteX="0dp" />
 
     <Button
         android:id="@+id/siguientePregunta"
@@ -93,9 +93,9 @@
         android:background="#4CAF50"
         android:text="@string/siguiente"
         android:textColor="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/volver"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.742"
+        app:layout_constraintVertical_bias="0.936"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp" />
 
