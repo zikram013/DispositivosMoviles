@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import static android.graphics.BlendMode.COLOR;
@@ -18,6 +19,7 @@ public class Pregunta3 extends AppCompatActivity implements View.OnClickListener
     private int puntuacion=0;
     private Intent i,recibe,vueltaAtras;
     private Bundle bolsa;
+    private TextView mostrarPuntuacion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +27,7 @@ public class Pregunta3 extends AppCompatActivity implements View.OnClickListener
         setContentView(R.layout.pregunta3);
         i=new Intent(Pregunta3.this,Pregunta4.class);
         vueltaAtras=new Intent(Pregunta3.this,MainActivity.class);
+        mostrarPuntuacion=findViewById(R.id.puntuacionFinal);
         a= findViewById(R.id.respuesta1);
         b= findViewById(R.id.respuesta2);
         c= findViewById(R.id.respuesta3);
@@ -52,6 +55,7 @@ public class Pregunta3 extends AppCompatActivity implements View.OnClickListener
         atras.setOnClickListener(this);
         sig.setEnabled(false);
         atras.setEnabled(false);
+        mostrarPuntuacion.setText("Su puntuacion es: " + puntuacion);
         System.out.println("Bolsa: " + bolsa.getInt("puntuacion"));
     }
 
