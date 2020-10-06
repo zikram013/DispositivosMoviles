@@ -1,5 +1,6 @@
 package com.example.preguntados;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -52,6 +53,7 @@ public class Pregunta2 extends AppCompatActivity implements View.OnClickListener
 
     }
 
+    @SuppressLint("WrongConstant")
     @Override
     public void onClick(View arg0){
         switch (arg0.getId()){
@@ -65,6 +67,7 @@ public class Pregunta2 extends AppCompatActivity implements View.OnClickListener
                 sig.setEnabled(true);
                 atras.setEnabled(true);
                 sig.setVisibility(View.VISIBLE);
+                Toast.makeText(this,"Respuesta correcta +3 puntos",5).show();
                 break;
             case R.id.respuesta2:
                 puntuacion= puntuacion-2;
@@ -78,6 +81,7 @@ public class Pregunta2 extends AppCompatActivity implements View.OnClickListener
                 atras.setEnabled(true);
                 sig.setVisibility(View.VISIBLE);
                 atras.setVisibility(View.VISIBLE);
+                Toast.makeText(this,"Respuesta incorrecta -2 puntos",5).show();
                 break;
             case R.id.respuesta3:
                 puntuacion= puntuacion-2;
@@ -91,6 +95,7 @@ public class Pregunta2 extends AppCompatActivity implements View.OnClickListener
                 atras.setEnabled(true);
                 sig.setVisibility(View.VISIBLE);
                 atras.setVisibility(View.VISIBLE);
+                Toast.makeText(this,"Respuesta incorrecta -2 puntos",5).show();
                 break;
             case R.id.respuesta4:
                 puntuacion= puntuacion-2;
@@ -103,6 +108,7 @@ public class Pregunta2 extends AppCompatActivity implements View.OnClickListener
                 sig.setEnabled(true);
                 sig.setVisibility(View.VISIBLE);
                 atras.setVisibility(View.VISIBLE);
+                Toast.makeText(this,"Respuesta incorrecta -2 puntos",5).show();
                 break;
             case R.id.siguientePregunta:
                 startActivity(i);
