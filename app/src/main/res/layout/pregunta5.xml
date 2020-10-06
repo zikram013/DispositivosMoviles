@@ -21,7 +21,7 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/puntuacionFinal"
-        app:layout_constraintVertical_bias="0.427"
+        app:layout_constraintVertical_bias="0.338"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -85,7 +85,7 @@
         android:layout_column="2"
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="24dp"
         android:layout_x="26dp"
         android:layout_y="340dp"
         android:contentDescription="@string/umbreon"
@@ -106,7 +106,7 @@
         android:layout_marginLeft="15dp"
         android:layout_marginEnd="40dp"
         android:layout_marginRight="40dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="24dp"
         android:layout_x="209dp"
         android:layout_y="339dp"
         android:contentDescription="@string/articuno"
