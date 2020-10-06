@@ -14,33 +14,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="48dp"
-        android:layout_x="-14dp"
+        android:layout_x="-1dp"
         android:layout_y="223dp"
         android:text="¿Cómo se llaman los protagonistas de la serie «BATES MOTEL»?"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp" />
-
-    <Button
-        android:id="@+id/siguientePregunta"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_x="2dp"
-        android:layout_y="485dp"
-        android:text="@string/siguiente"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="-16dp"
-        tools:layout_editor_absoluteY="571dp" />
-
-    <Button
-        android:id="@+id/volver"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_x="5dp"
-        android:layout_y="549dp"
-        android:text="@string/volver"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="-16dp"
-        tools:layout_editor_absoluteY="571dp" />
 
     <TextView
         android:id="@+id/puntuacionFinal"
@@ -89,4 +67,26 @@
         android:onClick="onRadioButtonClicked"
         android:text="Norma y Norman Bates"
         tools:ignore="OnClick" />
+
+    <Button
+        android:id="@+id/siguientePregunta"
+        android:layout_width="413dp"
+        android:layout_height="wrap_content"
+        android:layout_x="0dp"
+        android:layout_y="567dp"
+        android:background="#4CAF50"
+        android:text="@string/siguiente"
+        android:textColor="@android:color/white"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/volver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_x="-1dp"
+        android:layout_y="646dp"
+        android:background="#4CAF50"
+        android:text="@string/volver"
+        android:textColor="@android:color/white"
+        tools:ignore="MissingConstraints" />
 </AbsoluteLayout>

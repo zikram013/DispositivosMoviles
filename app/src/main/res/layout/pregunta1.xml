@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,10 +8,13 @@
     android:gravity="center_vertical"
     tools:context=".Pregunta1">
 
+
     <TextView
         android:id="@+id/pregunta1"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_x="0dp"
+        android:layout_y="187dp"
         android:text="¿Cuál es la famosa secuencia de números que ha de ser introducida en el ordenador del búnker en la serie de «PERDIDOS»?"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp"
@@ -21,67 +24,75 @@
         android:id="@+id/respuesta1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_x="0dp"
+        android:layout_y="303dp"
+        android:background="#009688"
         android:text="@string/_4_8_10_23_36_56"
+        android:textColor="@android:color/white"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="242dp"
-        android:background="#009688"
-        android:textColor="@android:color/white"/>
+        tools:layout_editor_absoluteY="242dp" />
 
     <Button
         android:id="@+id/respuesta2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_x="-2dp"
+        android:layout_y="362dp"
+        android:background="#009688"
         android:text="@string/_4_8_15_18_37_56"
+        android:textColor="@android:color/white"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="321dp"
-        android:background="#009688"
-        android:textColor="@android:color/white"/>
+        tools:layout_editor_absoluteY="321dp" />
 
     <Button
         android:id="@+id/respuesta3"
-        android:layout_width="match_parent"
+        android:layout_width="415dp"
         android:layout_height="wrap_content"
+        android:layout_x="0dp"
+        android:layout_y="418dp"
+        android:background="#009688"
         android:text="@string/_4_8_15_16_23_32"
+        android:textColor="@android:color/white"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="402dp"
-        android:background="#009688"
-        android:textColor="@android:color/white"/>
-
+        tools:layout_editor_absoluteY="402dp" />
 
     <Button
         android:id="@+id/respuesta4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_x="-1dp"
+        android:layout_y="479dp"
+        android:background="#009688"
         android:text="@string/_4_8_15_16_23_42"
+        android:textColor="@android:color/white"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="-32dp"
-        tools:layout_editor_absoluteY="491dp"
-        android:background="#009688"
-        android:textColor="@android:color/white"/>
+        tools:layout_editor_absoluteY="491dp" />
 
     <Button
         android:id="@+id/siguientePregunta"
-        android:layout_width="match_parent"
+        android:layout_width="411dp"
         android:layout_height="wrap_content"
-        android:text="@string/siguiente"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="-16dp"
-        tools:layout_editor_absoluteY="571dp"
+        android:layout_x="0dp"
+        android:layout_y="567dp"
         android:background="#4CAF50"
-        android:textColor="@android:color/white"/>
+        android:text="@string/siguiente"
+        android:textColor="@android:color/white"
+        tools:ignore="MissingConstraints" />
+
     <Button
         android:id="@+id/volver"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_x="-1dp"
+        android:layout_y="625dp"
         android:text="@string/volver"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="-16dp"
-        tools:layout_editor_absoluteY="571dp"
         android:background="#4CAF50"
-        android:textColor="@android:color/white"/>
+        android:textColor="@android:color/white"
+        tools:ignore="MissingConstraints" />
 
 
-</LinearLayout>
+</AbsoluteLayout>
