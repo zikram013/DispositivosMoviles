@@ -39,7 +39,7 @@
 
     <Button
         android:id="@+id/respuesta1"
-        android:layout_width="411dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_x="0dp"
         android:layout_y="305dp"
@@ -47,10 +47,10 @@
         android:text="8 de noviembre 1983"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toTopOf="@+id/respuesta2"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.922"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp" />
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/respuesta2"
