@@ -34,21 +34,25 @@
         app:layout_constraintVertical_bias="0.797" />
 
 
-
     <TextView
         android:id="@+id/puntuacionFinal"
-        android:layout_width="130dp"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
         android:layout_x="250dp"
         android:layout_y="103dp"
-        android:background="#FFFFFF"
+        android:background="#000000"
         android:text=""
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.12"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.039" />
+        app:layout_constraintVertical_bias="0.041"
+        android:gravity="center"/>
 
     <Button
         android:id="@+id/respuesta1"

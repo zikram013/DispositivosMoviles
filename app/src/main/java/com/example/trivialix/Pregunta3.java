@@ -52,8 +52,7 @@ public class Pregunta3 extends AppCompatActivity implements View.OnClickListener
         atras.setOnClickListener(this);
         sig.setEnabled(false);
         atras.setEnabled(false);
-        mostrarPuntuacion.setText("Su puntuacion es: " + puntuacion);
-        System.out.println("Bolsa: " + bolsa.getInt("puntuacion"));
+        mostrarPuntuacion.setText("Su puntuación es: " + puntuacion + " puntos");
     }
 
     @SuppressLint("WrongConstant")
@@ -123,7 +122,6 @@ public class Pregunta3 extends AppCompatActivity implements View.OnClickListener
             default:
         }
         i.putExtra("puntuacion",puntuacion);
-        System.out.println("Puntuacion: " + puntuacion);
 }
 
     @Override
