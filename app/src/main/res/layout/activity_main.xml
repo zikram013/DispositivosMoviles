@@ -1,27 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center_vertical"
-    tools:context=".MainActivity"
-    tools:ignore="Deprecated">
+    tools:context=".MainActivity">
 
 
     <Button
         android:id="@+id/iniciarJuego"
         android:layout_width="379dp"
         android:layout_height="78dp"
+        android:layout_marginBottom="128dp"
         android:layout_x="13dp"
         android:layout_y="474dp"
-        android:text="SI SABES DE SERIES, ¡ADELANTE!"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="-14dp"
-        tools:layout_editor_absoluteY="328dp"
         android:background="@android:color/holo_red_dark"
-        android:textColor="@android:color/white"/>
+        android:text="SI SABES DE SERIES, ¡ADELANTE!"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -33,6 +34,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.674"
         app:srcCompat="@drawable/fondo_app" />
 
-</AbsoluteLayout>
+</android.support.constraint.ConstraintLayout>
