@@ -8,8 +8,6 @@
     android:gravity="center_vertical"
     android:orientation="vertical"
     tools:context=".Pregunta3">
-
-
     <TextView
         android:id="@+id/pregunta3"
         android:layout_width="match_parent"
@@ -26,7 +24,7 @@
         app:layout_constraintBottom_toTopOf="@+id/respuesta1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.78" />
+        app:layout_constraintVertical_bias="0.849" />
 
     <TextView
         android:id="@+id/puntuacionFinal"
@@ -60,7 +58,7 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/respuesta2"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.922"
+        app:layout_constraintVertical_bias="0.975"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp" />
 
@@ -76,9 +74,9 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/respuesta3"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.933"
+        app:layout_constraintVertical_bias="0.975"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp" />
+        tools:layout_editor_absoluteX="0dp" />
 
     <Button
         android:id="@+id/respuesta3"
@@ -95,7 +93,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.941"
+        app:layout_constraintVertical_bias="0.975"
         tools:ignore="MissingConstraints" />
 
     <Button
@@ -110,7 +108,7 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/siguientePregunta"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.94"
+        app:layout_constraintVertical_bias="0.975"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp" />
 
@@ -144,5 +142,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.976"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp" />
+        tools:layout_editor_absoluteX="-16dp" />
+
 </android.support.constraint.ConstraintLayout>

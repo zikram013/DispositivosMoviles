@@ -11,22 +11,22 @@
 
     <TextView
         android:id="@+id/pregunta4"
-        android:layout_width="394dp"
-        android:layout_height="66dp"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
         android:layout_x="13dp"
         android:layout_y="86dp"
         android:gravity="center_horizontal"
-        android:text="¿Quiénes son las personas que aparecen en el siguiente fotograma de la serie «CRÓNICAS VAMPÍRICAS»?"
+        android:text="¿Quiénes son estos personajes de la serie «CRÓNICAS VAMPÍRICAS»?"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.728"
+        app:layout_constraintVertical_bias="0.95"
         tools:ignore="MissingConstraints" />
 
     <TextView
