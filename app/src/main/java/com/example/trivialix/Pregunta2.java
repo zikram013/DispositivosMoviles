@@ -112,6 +112,7 @@ public class Pregunta2 extends AppCompatActivity implements View.OnClickListener
                 d.setEnabled(false);
                 sig.setEnabled(true);
                 sig.setVisibility(View.VISIBLE);
+                atras.setEnabled(true);
                 atras.setVisibility(View.VISIBLE);
                 Toast.makeText(this,"Respuesta incorrecta -2 puntos",5).show();
                 break;
