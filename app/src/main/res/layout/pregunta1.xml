@@ -17,7 +17,6 @@
         android:layout_x="-1dp"
         android:layout_y="223dp"
         android:background="#FFFFFF"
-        android:fontFamily="sans-serif-black"
         android:gravity="center_horizontal"
         android:text="¿Cuál es la famosa secuencia de números que aparece en la serie de «PERDIDOS»?"
         android:textAlignment="center"
@@ -26,9 +25,8 @@
         app:layout_constraintBottom_toTopOf="@+id/respuesta1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.849"
 
-        app:layout_constraintVertical_bias="0.849" 
-        app:layout_constraintVertical_bias="0.861"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp"
         android:fontFamily="sans-serif-black"/>

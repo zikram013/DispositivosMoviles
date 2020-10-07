@@ -15,7 +15,6 @@
         android:layout_x="-1dp"
         android:layout_y="223dp"
         android:background="#FFFFFF"
-        android:fontFamily="sans-serif-black"
         android:gravity="center_horizontal"
         android:text="¿Qué día desaparece Will Byers en la serie de «STRANGER THINGS»?"
         android:textAlignment="center"
@@ -26,12 +25,11 @@
         app:layout_constraintTop_toTopOf="parent"
 
         app:layout_constraintVertical_bias="0.849" 
-        app:layout_constraintVertical_bias="0.846"
+
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp"
-        android:textAlignment="center"
-        android:gravity="center_horizontal"
         android:fontFamily="sans-serif-black"/>
+    <!--app:layout_constraintVertical_bias="0.846"-->
 
 
     <TextView
