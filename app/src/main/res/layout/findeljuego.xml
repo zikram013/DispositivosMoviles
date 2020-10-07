@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:ndroid="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pop_corn_wallpaper"
     tools:context=".FinDeJuego"
     tools:ignore="Deprecated">
 
@@ -48,14 +48,17 @@
 
     <TextView
         android:id="@+id/puntuacionFinal"
-        android:layout_width="318dp"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
         android:layout_x="29dp"
         android:layout_y="172dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
         android:text=""
+        android:textColor="#000000"
+        android:textSize="24sp"
         ndroid:layout_constraintBottom_toTopOf="@+id/buenaPuntuacion"
-        ndroid:layout_constraintEnd_toEndOf="parent"
-        ndroid:layout_constraintStart_toStartOf="parent"
         ndroid:layout_constraintTop_toTopOf="parent"
-        android:fontFamily="sans-serif-black"/>
+        ndroid:layout_constraintVertical_bias="0.732"
+        tools:layout_editor_absoluteX="0dp" />
 </android.support.constraint.ConstraintLayout>
