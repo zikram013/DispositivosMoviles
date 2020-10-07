@@ -5,14 +5,14 @@
 
     <application
         android:icon="@mipmap/ic_launcher"
-        android:label="QUIZFLIX"
+        android:label="TRIVIALIX"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="MissingClass">
         <activity
             android:name="com.example.trivialix.MainActivity"
-            android:label="QUIZFLIX">
+            android:label="TRIVIALIX">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
