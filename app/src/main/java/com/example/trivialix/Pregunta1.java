@@ -45,7 +45,7 @@ public class Pregunta1 extends AppCompatActivity implements View.OnClickListener
         sig.setOnClickListener(this);
         sig.setEnabled(false);
         atras.setEnabled(false);
-        mostrarPuntuacion.setText("Su puntuacion es: " + puntuacion);
+        mostrarPuntuacion.setText("Su puntuación es: " + puntuacion + " puntos");
     }
 
     @SuppressLint("WrongConstant")
@@ -115,7 +115,6 @@ public class Pregunta1 extends AppCompatActivity implements View.OnClickListener
         }
 
         i.putExtra("puntuacion",puntuacion);
-        System.out.println("Puntuacion: " + puntuacion);
     }
 
     @Override

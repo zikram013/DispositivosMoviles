@@ -4,41 +4,55 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="@drawable/pop_corn_wallpaper"
     android:gravity="center_vertical"
+    android:orientation="vertical"
     tools:context=".Pregunta1">
 
 
     <TextView
         android:id="@+id/pregunta1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="0dp"
-        android:layout_y="187dp"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:layout_x="-1dp"
+        android:layout_y="223dp"
+        android:background="#FFFFFF"
+        android:fontFamily="sans-serif-black"
         android:gravity="center_horizontal"
-        android:text="¿Cuál es la famosa secuencia de números que ha de ser introducida en el ordenador del búnker en la serie de «PERDIDOS»?"
+        android:text="¿Cuál es la famosa secuencia de números que aparece en la serie de «PERDIDOS»?"
         android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/respuesta1"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+
+        app:layout_constraintVertical_bias="0.849" 
         app:layout_constraintVertical_bias="0.861"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp"
         android:fontFamily="sans-serif-black"/>
 
+
     <TextView
         android:id="@+id/puntuacionFinal"
-        android:layout_width="130dp"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
         android:layout_x="250dp"
         android:layout_y="103dp"
+        android:background="#000000"
+        android:gravity="center"
         android:text=""
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.056"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.064" />
-
+        app:layout_constraintVertical_bias="0.022" />
 
     <Button
         android:id="@+id/respuesta1"
@@ -46,12 +60,13 @@
         android:layout_height="wrap_content"
         android:layout_x="0dp"
         android:layout_y="303dp"
-        android:background="#4F646E"
-        android:text="@string/_4_8_10_23_36_56"
-        android:textColor="@android:color/white"
+        android:background="@drawable/buttonshape"
+        android:text="4 8 10 23 36 56"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/respuesta2"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.919"
+        app:layout_constraintVertical_bias="0.975"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp" />
 
@@ -61,14 +76,15 @@
         android:layout_height="wrap_content"
         android:layout_x="-2dp"
         android:layout_y="362dp"
-        android:background="#4F646E"
-        android:text="@string/_4_8_15_18_37_56"
-        android:textColor="@android:color/white"
+        android:background="@drawable/buttonshape"
+        android:text="4 8 15 18 37 56"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/respuesta3"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.933"
+        app:layout_constraintVertical_bias="0.975"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp" />
+        tools:layout_editor_absoluteX="0dp" />
 
     <Button
         android:id="@+id/respuesta3"
@@ -76,15 +92,16 @@
         android:layout_height="wrap_content"
         android:layout_x="0dp"
         android:layout_y="418dp"
-        android:background="#4F646E"
-        android:text="@string/_4_8_15_16_23_32"
-        android:textColor="@android:color/white"
+        android:background="@drawable/buttonshape"
+        android:text="4 8 15 16 23 32"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/respuesta4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.941"
+        app:layout_constraintVertical_bias="0.975"
         tools:ignore="MissingConstraints" />
 
     <Button
@@ -93,12 +110,13 @@
         android:layout_height="wrap_content"
         android:layout_x="-1dp"
         android:layout_y="479dp"
-        android:background="#4F646E"
-        android:text="@string/_4_8_15_16_23_42"
-        android:textColor="@android:color/white"
+        android:background="@drawable/buttonshape"
+        android:text="4 8 15 16 23 42"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/siguientePregunta"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.94"
+        app:layout_constraintVertical_bias="0.975"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp" />
 
@@ -111,9 +129,10 @@
         android:background="#000000"
         android:text="@string/siguiente"
         android:textColor="@android:color/white"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/volver"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.936"
+        app:layout_constraintVertical_bias="0.977"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp" />
 
@@ -126,11 +145,11 @@
         android:background="#000000"
         android:text="@string/volver"
         android:textColor="@android:color/white"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.945"
+        app:layout_constraintVertical_bias="0.976"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp" />
-
+        tools:layout_editor_absoluteX="-16dp" />
 
 </android.support.constraint.ConstraintLayout>

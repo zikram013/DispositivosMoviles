@@ -4,52 +4,68 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="@drawable/pop_corn_wallpaper"
     android:gravity="center_vertical"
+    android:orientation="vertical"
     tools:context=".Pregunta4">
 
     <TextView
         android:id="@+id/pregunta4"
-        android:layout_width="337dp"
-        android:layout_height="63dp"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
         android:layout_x="13dp"
         android:layout_y="86dp"
         android:gravity="center_horizontal"
-        android:text="¿Quiénes son las personas que aparecen en el siguiente fotograma de la serie «CRÓNICAS VAMPÍRICAS»?"
+        android:text="¿Quiénes son estos personajes de la serie «CRÓNICAS VAMPÍRICAS»?"
         android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+
+        app:layout_constraintVertical_bias="0.95"
+        tools:ignore="MissingConstraints" 
+
         app:layout_constraintVertical_bias="0.947"
         tools:ignore="MissingConstraints"
         android:fontFamily="sans-serif-black"/>
 
+
     <TextView
         android:id="@+id/puntuacionFinal"
-        android:layout_width="130dp"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
         android:layout_x="250dp"
         android:layout_y="103dp"
+        android:background="#000000"
+        android:gravity="center"
         android:text=""
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.12"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.039" />
+        app:layout_constraintVertical_bias="0.022" />
 
     <RadioGroup
         android:id="@+id/radioGroup3"
-        android:layout_width="338dp"
-        android:layout_height="123dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
+        android:layout_width="285dp"
+        android:layout_height="126dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="80dp"
         android:layout_marginEnd="40dp"
         android:layout_marginRight="40dp"
         android:layout_x="0dp"
         android:layout_y="356dp"
+        android:gravity="center_vertical"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/siguientePregunta"
         app:layout_constraintEnd_toEndOf="parent"
@@ -65,6 +81,7 @@
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClicked"
             android:text="Matt, Elena, Niklaus"
+            android:textSize="18sp"
             tools:ignore="OnClick" />
 
         <RadioButton
@@ -73,6 +90,7 @@
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClicked"
             android:text="Alaric, Hayley, Jeremy"
+            android:textSize="18sp"
             tools:ignore="OnClick" />
 
         <RadioButton
@@ -81,55 +99,55 @@
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClicked"
             android:text="Stefan, Katherine, Damon"
+            android:textSize="18sp"
             tools:ignore="OnClick" />
 
         <RadioButton
             android:id="@+id/respuesta4"
-            android:layout_width="wrap_content"
+            android:layout_width="228dp"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClicked"
             android:text="Enzo, Bonnie y Damon"
+            android:textSize="18sp"
             tools:ignore="OnClick" />
     </RadioGroup>
 
     <Button
         android:id="@+id/siguientePregunta"
-        android:layout_width="411dp"
-        android:layout_height="48dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_x="0dp"
         android:layout_y="567dp"
         android:background="#000000"
         android:text="@string/siguiente"
         android:textColor="@android:color/white"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/volver"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.966"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintVertical_bias="0.977"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
 
     <Button
         android:id="@+id/volver"
-        android:layout_width="409dp"
-        android:layout_height="44dp"
-        android:layout_x="-1dp"
-        android:layout_y="621dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_x="0dp"
+        android:layout_y="567dp"
         android:background="#000000"
         android:text="@string/volver"
         android:textColor="@android:color/white"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.931"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintVertical_bias="0.976"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="278dp"
-        android:layout_height="150dp"
+        android:layout_width="299dp"
+        android:layout_height="170dp"
         android:layout_x="33dp"
         android:layout_y="136dp"
         android:src="@drawable/foto_pregunta4"

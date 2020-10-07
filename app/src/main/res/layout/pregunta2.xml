@@ -4,42 +4,55 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="@drawable/pop_corn_wallpaper"
     android:gravity="center_vertical"
-    tools:context=".Pregunta2"
-    tools:ignore="Deprecated">
+    android:orientation="vertical"
+    tools:context=".Pregunta2">
+
 
     <TextView
         android:id="@+id/pregunta2"
-        android:layout_width="342dp"
-        android:layout_height="46dp"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
         android:layout_x="-1dp"
         android:layout_y="223dp"
+        android:background="#FFFFFF"
+        android:fontFamily="sans-serif-black"
         android:gravity="center_horizontal"
         android:text="¿Cómo se llaman los protagonistas de la serie «BATES MOTEL»?"
         android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/respuesta1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+
+        app:layout_constraintVertical_bias="0.849" 
+
         app:layout_constraintVertical_bias="0.947"
         tools:ignore="MissingConstraints"
         android:fontFamily="sans-serif-black"/>
 
+
     <TextView
         android:id="@+id/puntuacionFinal"
-        android:layout_width="130dp"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
         android:layout_x="250dp"
         android:layout_y="103dp"
+        android:background="#000000"
+        android:gravity="center"
         android:text=""
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.12"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.039" />
+        app:layout_constraintVertical_bias="0.022" />
 
     <Button
         android:id="@+id/respuesta1"
@@ -47,12 +60,13 @@
         android:layout_height="wrap_content"
         android:layout_x="0dp"
         android:layout_y="303dp"
-        android:background="#4F646E"
+        android:background="@drawable/buttonshape"
         android:text="Norma y Norman Bates"
-        android:textColor="@android:color/white"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/respuesta2"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.922"
+        app:layout_constraintVertical_bias="0.975"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp" />
 
@@ -62,14 +76,15 @@
         android:layout_height="wrap_content"
         android:layout_x="-2dp"
         android:layout_y="362dp"
-        android:background="#4F646E"
+        android:background="@drawable/buttonshape"
         android:text="Wendy y Billy Hudson"
-        android:textColor="@android:color/white"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/respuesta3"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.933"
+        app:layout_constraintVertical_bias="0.975"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp" />
+        tools:layout_editor_absoluteX="0dp" />
 
     <Button
         android:id="@+id/respuesta3"
@@ -77,15 +92,16 @@
         android:layout_height="wrap_content"
         android:layout_x="0dp"
         android:layout_y="418dp"
-        android:background="#4F646E"
+        android:background="@drawable/buttonshape"
         android:text="Alice y Alex Romero"
-        android:textColor="@android:color/white"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/respuesta4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.941"
+        app:layout_constraintVertical_bias="0.975"
         tools:ignore="MissingConstraints" />
 
     <Button
@@ -94,12 +110,13 @@
         android:layout_height="wrap_content"
         android:layout_x="-1dp"
         android:layout_y="479dp"
-        android:background="#4F646E"
+        android:background="@drawable/buttonshape"
         android:text="Mandy y Bob Motel"
-        android:textColor="@android:color/white"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/siguientePregunta"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.94"
+        app:layout_constraintVertical_bias="0.975"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp" />
 
@@ -112,11 +129,12 @@
         android:background="#000000"
         android:text="@string/siguiente"
         android:textColor="@android:color/white"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/volver"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.936"
+        app:layout_constraintVertical_bias="0.977"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="-16dp" />
+        tools:layout_editor_absoluteX="0dp" />
 
     <Button
         android:id="@+id/volver"
@@ -127,9 +145,10 @@
         android:background="#000000"
         android:text="@string/volver"
         android:textColor="@android:color/white"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.849"
+        app:layout_constraintVertical_bias="0.976"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="-15dp" />
+        tools:layout_editor_absoluteX="-16dp" />
 </android.support.constraint.ConstraintLayout>

@@ -53,9 +53,7 @@ public class Pregunta2 extends AppCompatActivity implements View.OnClickListener
         sig.setOnClickListener(this);
         sig.setEnabled(false);
         atras.setEnabled(false);
-        System.out.println("Bolsa: " + bolsa.getInt("puntuacion"));
-        mostrarPuntuacion.setText("Su puntuacion es: " + puntuacion);/**/
-
+        mostrarPuntuacion.setText("Su puntuación es: " + puntuacion + " puntos");
     }
 
     @SuppressLint("WrongConstant")
@@ -112,6 +110,7 @@ public class Pregunta2 extends AppCompatActivity implements View.OnClickListener
                 d.setEnabled(false);
                 sig.setEnabled(true);
                 sig.setVisibility(View.VISIBLE);
+                atras.setEnabled(true);
                 atras.setVisibility(View.VISIBLE);
                 Toast.makeText(this,"Respuesta incorrecta -2 puntos",5).show();
                 break;
@@ -125,7 +124,6 @@ public class Pregunta2 extends AppCompatActivity implements View.OnClickListener
             default:
         }
         i.putExtra("puntuacion",puntuacion);
-        System.out.println("Puntuacion: " + puntuacion);
     }
 
     @Override
