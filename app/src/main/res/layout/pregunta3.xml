@@ -21,7 +21,8 @@
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp"
         android:textAlignment="center"
-        android:gravity="center_horizontal" />
+        android:gravity="center_horizontal"
+        android:fontFamily="sans-serif-black"/>
 
     <TextView
         android:id="@+id/puntuacionFinal"

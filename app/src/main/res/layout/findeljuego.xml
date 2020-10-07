@@ -56,5 +56,6 @@
         ndroid:layout_constraintBottom_toTopOf="@+id/buenaPuntuacion"
         ndroid:layout_constraintEnd_toEndOf="parent"
         ndroid:layout_constraintStart_toStartOf="parent"
-        ndroid:layout_constraintTop_toTopOf="parent" />
+        ndroid:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="sans-serif-black"/>
 </android.support.constraint.ConstraintLayout>
