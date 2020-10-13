@@ -23,7 +23,7 @@
         android:background="#FFFFFF"
         android:fontFamily="sans-serif-black"
         android:gravity="center_horizontal"
-        android:text="¿Cuál es la famosa secuencia de números que aparece en la serie de «PERDIDOS»?"
+        android:text="@string/cu_l_es_la_famosa_secuencia_de_n_meros_que_aparece_en_la_serie_de_perdidos"
         android:textAlignment="center"
         android:textColor="#000000"
 
@@ -33,7 +33,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.87"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints" tools:targetApi="jelly_bean"/>
 
     <TextView
         android:id="@+id/puntuacionFinal"
@@ -68,7 +68,7 @@
         android:layout_x="0dp"
         android:layout_y="303dp"
         android:background="@drawable/buttonshape"
-        android:text="4 8 10 23 36 56"
+        android:text="@string/_4_8_10_23_36_56"
         android:textColor="@android:color/black"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/respuesta2"
@@ -91,7 +91,7 @@
         android:layout_x="-2dp"
         android:layout_y="362dp"
         android:background="@drawable/buttonshape"
-        android:text="4 8 15 18 37 56"
+        android:text="@string/_4_8_15_18_37_56"
         android:textColor="@android:color/black"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/respuesta3"
@@ -114,7 +114,7 @@
         android:layout_x="0dp"
         android:layout_y="418dp"
         android:background="@drawable/buttonshape"
-        android:text="4 8 15 16 23 32"
+        android:text="@string/_4_8_15_16_23_32"
         android:textColor="@android:color/black"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/respuesta4"
@@ -136,7 +136,7 @@
         android:layout_x="-1dp"
         android:layout_y="479dp"
         android:background="@drawable/buttonshape"
-        android:text="4 8 15 16 23 42"
+        android:text="@string/_4_8_15_16_23_42"
         android:textColor="@android:color/black"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"

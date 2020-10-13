@@ -16,7 +16,7 @@
         android:layout_x="13dp"
         android:layout_y="86dp"
         android:gravity="center_horizontal"
-        android:text="¿Quiénes son estos personajes de la serie «CRÓNICAS VAMPÍRICAS»?"
+        android:text="@string/enunciadoPregunta4"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="18sp"
@@ -31,7 +31,7 @@
         tools:ignore="MissingConstraints" 
 
 
-        android:fontFamily="sans-serif-black"/>
+        android:fontFamily="sans-serif-black" tools:targetApi="jelly_bean" />
     <!--app:layout_constraintVertical_bias="0.947"-->
 
     <TextView
@@ -78,8 +78,8 @@
             android:id="@+id/respuesta1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="onRadioButtonClicked"
-            android:text="Matt, Elena, Niklaus"
+            android:onClick="onClick"
+            android:text="@string/matt_elena_niklaus"
             android:textSize="18sp"
             tools:ignore="OnClick" />
 
@@ -87,8 +87,8 @@
             android:id="@+id/respuesta2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="onRadioButtonClicked"
-            android:text="Alaric, Hayley, Jeremy"
+            android:onClick="onClick"
+            android:text="@string/alaric_hayley_jeremy"
             android:textSize="18sp"
             tools:ignore="OnClick" />
 
@@ -96,8 +96,8 @@
             android:id="@+id/respuesta3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="onRadioButtonClicked"
-            android:text="Stefan, Katherine, Damon"
+            android:onClick="onClick"
+            android:text="@string/stefan_katherine_damon"
             android:textSize="18sp"
             tools:ignore="OnClick" />
 
@@ -105,8 +105,8 @@
             android:id="@+id/respuesta4"
             android:layout_width="228dp"
             android:layout_height="wrap_content"
-            android:onClick="onRadioButtonClicked"
-            android:text="Enzo, Bonnie y Damon"
+            android:onClick="onClick"
+            android:text="@string/enzo_bonnie_y_damon"
             android:textSize="18sp"
             tools:ignore="OnClick" />
     </RadioGroup>
@@ -156,6 +156,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.961"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        android:contentDescription="@string/todo" />
 
 </android.support.constraint.ConstraintLayout>

@@ -21,7 +21,7 @@
         android:layout_x="13dp"
         android:layout_y="474dp"
         android:background="@android:color/holo_red_dark"
-        android:text="SI SABES DE SERIES, ¡ADELANTE!"
+        android:text="@string/si_sabes_de_series_adelante"
         android:textColor="@android:color/white"
         android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -43,6 +43,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.732"
-        app:srcCompat="@drawable/fondo_app" />
+        app:srcCompat="@drawable/fondo_app"
+        android:contentDescription="@string/todo" />
 
 </android.support.constraint.ConstraintLayout>

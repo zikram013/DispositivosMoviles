@@ -19,7 +19,7 @@
         android:background="#FFFFFF"
         android:fontFamily="sans-serif-black"
         android:gravity="center_horizontal"
-        android:text="¿Cómo se llaman los protagonistas de la serie «BATES MOTEL»?"
+        android:text="@string/c_mo_se_llaman_los_protagonistas_de_la_serie_bates_motel"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="18sp"
@@ -30,7 +30,7 @@
         app:layout_constraintVertical_bias="0.849" 
 
 
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints" tools:targetApi="jelly_bean"/>
     <!--app:layout_constraintVertical_bias="0.947"-->
 
     <TextView
@@ -60,7 +60,7 @@
         android:layout_x="0dp"
         android:layout_y="303dp"
         android:background="@drawable/buttonshape"
-        android:text="Norma y Norman Bates"
+        android:text="@string/norma_y_norman_bates"
         android:textColor="@android:color/black"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/respuesta2"
@@ -76,7 +76,7 @@
         android:layout_x="-2dp"
         android:layout_y="362dp"
         android:background="@drawable/buttonshape"
-        android:text="Wendy y Billy Hudson"
+        android:text="@string/wendy_y_billy_hudson"
         android:textColor="@android:color/black"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/respuesta3"
@@ -92,7 +92,7 @@
         android:layout_x="0dp"
         android:layout_y="418dp"
         android:background="@drawable/buttonshape"
-        android:text="Alice y Alex Romero"
+        android:text="@string/alice_y_alex_romero"
         android:textColor="@android:color/black"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/respuesta4"
@@ -110,7 +110,7 @@
         android:layout_x="-1dp"
         android:layout_y="479dp"
         android:background="@drawable/buttonshape"
-        android:text="Mandy y Bob Motel"
+        android:text="@string/mandy_y_bob_motel"
         android:textColor="@android:color/black"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/siguientePregunta"
