@@ -9,12 +9,15 @@
     android:orientation="vertical"
     tools:context=".Pregunta4">
 
+    <!--app:layout_constraintVertical_bias="0.947"-->
+
     <TextView
         android:id="@+id/pregunta4"
         android:layout_width="match_parent"
         android:layout_height="46dp"
         android:layout_x="13dp"
         android:layout_y="86dp"
+        android:fontFamily="sans-serif-black"
         android:gravity="center_horizontal"
         android:text="@string/enunciadoPregunta4"
         android:textAlignment="center"
@@ -23,16 +26,15 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
+
         app:layout_constraintTop_toTopOf="parent"
-
-        app:layout_constraintVertical_bias="0.95"
-        tools:ignore="MissingConstraints" 
+        app:layout_constraintVertical_bias="0.965"
 
 
-        android:fontFamily="sans-serif-black" tools:targetApi="jelly_bean" />
-    <!--app:layout_constraintVertical_bias="0.947"-->
+        tools:ignore="MissingConstraints"
+        tools:targetApi="jelly_bean" />
 
     <TextView
         android:id="@+id/puntuacionFinal"
@@ -58,20 +60,15 @@
         android:id="@+id/radioGroup3"
         android:layout_width="285dp"
         android:layout_height="126dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginLeft="80dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginRight="40dp"
         android:layout_x="0dp"
         android:layout_y="356dp"
         android:gravity="center_vertical"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/siguientePregunta"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.219"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.979"
+        app:layout_constraintVertical_bias="0.965"
         tools:ignore="MissingConstraints">
 
         <RadioButton
@@ -113,24 +110,28 @@
 
     <Button
         android:id="@+id/siguientePregunta"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="145dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
         android:layout_x="0dp"
         android:layout_y="567dp"
         android:background="#000000"
         android:text="@string/siguiente"
         android:textColor="@android:color/white"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/volver"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/volver"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.977"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintVertical_bias="0.925"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/volver"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="154dp"
+        android:layout_height="54dp"
         android:layout_x="0dp"
         android:layout_y="567dp"
         android:background="#000000"
@@ -138,10 +139,11 @@
         android:textColor="@android:color/white"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/siguientePregunta"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintVertical_bias="0.923"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -149,14 +151,14 @@
         android:layout_height="170dp"
         android:layout_x="33dp"
         android:layout_y="136dp"
+        android:contentDescription="@string/todo"
         android:src="@drawable/foto_pregunta4"
         app:layout_constraintBottom_toTopOf="@+id/radioGroup3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.642"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.961"
-        tools:ignore="MissingConstraints"
-        android:contentDescription="@string/todo" />
+        app:layout_constraintVertical_bias="0.903"
+        tools:ignore="MissingConstraints" />
 
 </android.support.constraint.ConstraintLayout>
