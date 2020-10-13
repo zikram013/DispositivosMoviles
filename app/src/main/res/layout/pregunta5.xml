@@ -67,10 +67,10 @@
         android:contentDescription="@string/hydreigon"
         app:layout_constraintBottom_toTopOf="@+id/respuesta3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.122"
+        app:layout_constraintHorizontal_bias="0.183"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.901"
+        app:layout_constraintVertical_bias="0.77"
         app:srcCompat="@drawable/hydreigon"
         tools:ignore="MissingConstraints" />
 
@@ -88,7 +88,7 @@
         app:layout_constraintHorizontal_bias="0.303"
         app:layout_constraintStart_toEndOf="@+id/respuesta1"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.901"
+        app:layout_constraintVertical_bias="0.772"
         app:srcCompat="@drawable/charizard"
         tools:ignore="MissingConstraints" />
 
@@ -103,10 +103,10 @@
         android:contentDescription="@string/umbreon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.122"
+        app:layout_constraintHorizontal_bias="0.183"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.712"
+        app:layout_constraintVertical_bias="0.648"
         app:srcCompat="@drawable/umbreon"
         tools:ignore="MissingConstraints" />
 
@@ -126,7 +126,7 @@
         app:layout_constraintHorizontal_bias="0.202"
         app:layout_constraintStart_toEndOf="@+id/respuesta3"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.712"
+        app:layout_constraintVertical_bias="0.648"
         app:srcCompat="@drawable/articuno"
         tools:ignore="MissingConstraints" />
 
