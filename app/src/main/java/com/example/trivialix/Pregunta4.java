@@ -130,5 +130,4 @@ public class Pregunta4 extends AppCompatActivity implements View.OnClickListener
     public boolean onCreateOptionsMenu(Menu menu) {
         return super.onCreateOptionsMenu(menu);
     }
-
 }
