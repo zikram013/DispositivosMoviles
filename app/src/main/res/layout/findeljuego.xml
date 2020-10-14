@@ -51,7 +51,7 @@
         android:layout_x="37dp"
         android:layout_y="502dp"
         android:background="#000000"
-        android:text="@string/volver"
+        android:text="@string/reintentar"
         android:textColor="#FFFFFF"
         ndroid:layout_constraintBottom_toBottomOf="parent"
         ndroid:layout_constraintEnd_toEndOf="parent"

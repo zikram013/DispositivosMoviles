@@ -181,7 +181,7 @@
         android:layout_x="0dp"
         android:layout_y="567dp"
         android:background="#000000"
-        android:text="@string/volver"
+        android:text="@string/reintentar"
         android:textColor="@android:color/white"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
