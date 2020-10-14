@@ -23,7 +23,7 @@
         android:background="#FFFFFF"
         android:fontFamily="sans-serif-black"
         android:gravity="center_horizontal"
-        android:text="@string/c_mo_se_llaman_los_protagonistas_de_la_serie_bates_motel"
+        android:text="@string/enunciadoPregunta2"
         android:textAlignment="center"
         android:textColor="#000000"
 

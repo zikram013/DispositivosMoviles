@@ -23,7 +23,7 @@
         android:background="#FFFFFF"
         android:fontFamily="sans-serif-black"
         android:gravity="center_horizontal"
-        android:text="@string/qu_d_a_desaparece_will_byers_en_la_serie_de_stranger_things"
+        android:text="@string/enunciadoPregunta3"
         android:textAlignment="center"
         android:textColor="#000000"
 

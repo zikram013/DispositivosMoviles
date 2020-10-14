@@ -23,7 +23,7 @@
         android:background="#FFFFFF"
         android:fontFamily="sans-serif-black"
         android:gravity="center_horizontal"
-        android:text="@string/cu_l_es_la_famosa_secuencia_de_n_meros_que_aparece_en_la_serie_de_perdidos"
+        android:text="@string/enunciadoPregunta1"
         android:textAlignment="center"
         android:textColor="#000000"
 
