@@ -30,7 +30,7 @@ public class Pregunta3 extends AppCompatActivity implements View.OnClickListener
         c= findViewById(R.id.respuesta3);
         d= findViewById(R.id.respuesta4);
         sig= findViewById(R.id.siguientePregunta);
-        atras=findViewById(R.id.volver);
+        atras=findViewById(R.id.reintentar);
         atras.setVisibility(View.INVISIBLE);
         sig.setVisibility(View.INVISIBLE);
         try{
@@ -116,7 +116,7 @@ public class Pregunta3 extends AppCompatActivity implements View.OnClickListener
             case R.id.siguientePregunta:
                 startActivity(i);
                 break;
-            case R.id.volver:
+            case R.id.reintentar:
                 startActivity(vueltaAtras);
                 break;
             default:

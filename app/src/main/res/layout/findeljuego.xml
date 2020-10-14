@@ -45,7 +45,7 @@
         ndroid:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/volver"
+        android:id="@+id/reintentar"
         android:layout_width="315dp"
         android:layout_height="wrap_content"
         android:layout_x="37dp"

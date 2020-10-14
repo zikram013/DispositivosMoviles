@@ -26,7 +26,7 @@ public class FinDeJuego extends AppCompatActivity implements View.OnClickListene
         super.onCreate(savedInstanceState);
         setContentView(R.layout.findeljuego);
         vueltaAtras=new Intent(FinDeJuego.this,MainActivity.class);
-        atras=findViewById(R.id.volver);
+        atras=findViewById(R.id.reintentar);
         atras.setOnClickListener(this);
         mostrarPuntuacion=findViewById(R.id.puntuacionFinal);
         gifBuenaPuntacion=findViewById(R.id.buenaPuntuacion);

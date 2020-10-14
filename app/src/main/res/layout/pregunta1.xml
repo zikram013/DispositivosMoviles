@@ -162,7 +162,7 @@
         android:text="@string/siguiente"
         android:textColor="@android:color/white"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/volver"
+        app:layout_constraintBottom_toTopOf="@+id/reintentar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -171,7 +171,7 @@
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/volver"
+        android:id="@+id/reintentar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
