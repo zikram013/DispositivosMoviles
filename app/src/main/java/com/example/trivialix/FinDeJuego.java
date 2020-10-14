@@ -17,7 +17,7 @@ public class FinDeJuego extends AppCompatActivity implements View.OnClickListene
     private int puntuacion=0;
     private Intent i,recibe,vueltaAtras;
     private Bundle bolsa;
-    private GifImageView gifBuenaPuntacion,gifMalaPuntacion;
+    private GifImageView gifBuenaPuntacion,gifMalaPuntacion, gifPuntacionNormal;
 
 
     @SuppressLint("SetTextI18n")
@@ -31,8 +31,10 @@ public class FinDeJuego extends AppCompatActivity implements View.OnClickListene
         mostrarPuntuacion=findViewById(R.id.puntuacionFinal);
         gifBuenaPuntacion=findViewById(R.id.buenaPuntuacion);
         gifMalaPuntacion=findViewById(R.id.malaPuntuacion);
+        gifPuntacionNormal=findViewById(R.id.puntuacionNormal);
         gifMalaPuntacion.setVisibility(View.INVISIBLE);
         gifBuenaPuntacion.setVisibility(View.INVISIBLE);
+        gifPuntacionNormal.setVisibility(View.INVISIBLE);
 
         try {
         }catch(Exception e){
@@ -50,6 +52,8 @@ public class FinDeJuego extends AppCompatActivity implements View.OnClickListene
 
         if(puntuacion<=4){
             gifMalaPuntacion.setVisibility(View.VISIBLE);
+        } else if(puntuacion <= 9){
+            gifPuntacionNormal.setVisibility(View.VISIBLE);
         }else{
             gifBuenaPuntacion.setVisibility(View.VISIBLE);
         }

@@ -21,6 +21,18 @@
         ndroid:layout_constraintTop_toTopOf="parent" />
 
     <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/puntuacionNormal"
+        android:layout_width="358dp"
+        android:layout_height="215dp"
+        android:layout_x="16dp"
+        android:layout_y="228dp"
+        android:src="@drawable/not_bad"
+        ndroid:layout_constraintBottom_toBottomOf="parent"
+        ndroid:layout_constraintEnd_toEndOf="parent"
+        ndroid:layout_constraintStart_toStartOf="parent"
+        ndroid:layout_constraintTop_toTopOf="parent" />
+
+    <pl.droidsonroids.gif.GifImageView
         android:id="@+id/malaPuntuacion"
         android:layout_width="369dp"
         android:layout_height="221dp"
