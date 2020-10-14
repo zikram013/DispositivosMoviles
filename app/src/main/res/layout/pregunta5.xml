@@ -28,8 +28,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/puntuacionFinal"
         app:layout_constraintVertical_bias="0.584"
-
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints" tools:targetApi="jelly_bean"
+        android:fontFamily="sans-serif-black"/>
 
     <TextView
         android:id="@+id/puntuacionFinal"
@@ -49,7 +49,9 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.022" />
+        app:layout_constraintVertical_bias="0.022"
+        android:fontFamily="sans-serif-black"
+        tools:ignore="MissingConstraints" tools:targetApi="jelly_bean"/>
 
     <ImageButton
         android:id="@+id/respuesta1"
