@@ -21,6 +21,18 @@
         ndroid:layout_constraintTop_toTopOf="parent" />
 
     <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/puntuacionNormal"
+        android:layout_width="358dp"
+        android:layout_height="215dp"
+        android:layout_x="16dp"
+        android:layout_y="228dp"
+        android:src="@drawable/not_bad"
+        ndroid:layout_constraintBottom_toBottomOf="parent"
+        ndroid:layout_constraintEnd_toEndOf="parent"
+        ndroid:layout_constraintStart_toStartOf="parent"
+        ndroid:layout_constraintTop_toTopOf="parent" />
+
+    <pl.droidsonroids.gif.GifImageView
         android:id="@+id/malaPuntuacion"
         android:layout_width="369dp"
         android:layout_height="221dp"
@@ -33,13 +45,13 @@
         ndroid:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/volver"
+        android:id="@+id/reintentar"
         android:layout_width="315dp"
         android:layout_height="wrap_content"
         android:layout_x="37dp"
         android:layout_y="502dp"
         android:background="#000000"
-        android:text="@string/volver"
+        android:text="@string/reintentar"
         android:textColor="#FFFFFF"
         ndroid:layout_constraintBottom_toBottomOf="parent"
         ndroid:layout_constraintEnd_toEndOf="parent"
@@ -60,5 +72,5 @@
         ndroid:layout_constraintBottom_toTopOf="@+id/buenaPuntuacion"
         ndroid:layout_constraintTop_toTopOf="parent"
         ndroid:layout_constraintVertical_bias="0.732"
-        tools:layout_editor_absoluteX="0dp" />
+        tools:layout_editor_absoluteX="0dp" tools:targetApi="jelly_bean"/>
 </android.support.constraint.ConstraintLayout>

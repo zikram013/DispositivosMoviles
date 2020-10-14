@@ -33,7 +33,7 @@ public class Pregunta4 extends AppCompatActivity implements View.OnClickListener
         d= findViewById(R.id.respuesta4);
         sig= findViewById(R.id.siguientePregunta);
         sig.setVisibility(View.INVISIBLE);
-        atras=findViewById(R.id.volver);
+        atras=findViewById(R.id.reintentar);
         atras.setVisibility(View.INVISIBLE);
         try{
 
@@ -118,7 +118,7 @@ public class Pregunta4 extends AppCompatActivity implements View.OnClickListener
             case R.id.siguientePregunta:
                 startActivity(i);
                 break;
-            case R.id.volver:
+            case R.id.reintentar:
                 startActivity(vueltaAtras);
                 break;
             default:
@@ -130,5 +130,4 @@ public class Pregunta4 extends AppCompatActivity implements View.OnClickListener
     public boolean onCreateOptionsMenu(Menu menu) {
         return super.onCreateOptionsMenu(menu);
     }
-
 }

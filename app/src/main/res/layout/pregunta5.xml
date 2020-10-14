@@ -7,6 +7,7 @@
     android:background="@drawable/pop_corn_wallpaper"
     tools:context=".Pregunta5">
 
+
     <TextView
         android:id="@+id/pregunta5"
         android:layout_width="385dp"
@@ -17,7 +18,7 @@
         android:layout_y="99dp"
         android:background="#00FFFFFF"
         android:gravity="center_horizontal"
-        android:text="¿Qué Pokémon tiene más debilidades?"
+        android:text="@string/enunciadoPregunta5"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="18sp"
@@ -26,13 +27,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/puntuacionFinal"
-        tools:ignore="MissingConstraints"
+        app:layout_constraintVertical_bias="0.584"
 
-        app:layout_constraintVertical_bias="0.338"
-        android:fontFamily="sans-serif-black"/>
-       <!-- app:layout_constraintVertical_bias="0.755"-->
-
-
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/puntuacionFinal"
@@ -126,7 +123,7 @@
         android:layout_x="209dp"
         android:layout_y="339dp"
         android:contentDescription="@string/articuno"
-        app:layout_constraintBottom_toTopOf="@+id/volver"
+        app:layout_constraintBottom_toTopOf="@+id/reintentar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/respuesta3"
         app:srcCompat="@drawable/articuno"
@@ -140,7 +137,7 @@
         android:layout_marginLeft="40dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="36dp"
+        android:layout_marginBottom="96dp"
         android:layout_x="33dp"
         android:layout_y="536dp"
         android:background="#000000"
@@ -148,24 +145,24 @@
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/volver"
+        app:layout_constraintEnd_toStartOf="@+id/reintentar"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/volver"
+        android:id="@+id/reintentar"
         android:layout_width="155dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="40dp"
         android:layout_marginRight="40dp"
-        android:layout_marginBottom="36dp"
+        android:layout_marginBottom="96dp"
         android:layout_x="217dp"
         android:layout_y="535dp"
         android:background="#000000"
-        android:text="@string/volver"
+        android:text="@string/reintentar"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
