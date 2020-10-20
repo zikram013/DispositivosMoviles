@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 import pl.droidsonroids.gif.GifImageView;
 
-public class FinDeJuego extends AppCompatActivity implements View.OnClickListener {
+public class FinDeJuego extends AppCompatActivity {
     private Button sig,atras;
     private TextView mostrarPuntuacion;
     private int puntuacion=0;
@@ -25,9 +25,8 @@ public class FinDeJuego extends AppCompatActivity implements View.OnClickListene
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.findeljuego);
-        vueltaAtras=new Intent(FinDeJuego.this,MainActivity.class);
+
         atras=findViewById(R.id.reintentar);
-        atras.setOnClickListener(this);
         mostrarPuntuacion=findViewById(R.id.puntuacionFinal);
         gifBuenaPuntacion=findViewById(R.id.buenaPuntuacion);
         gifMalaPuntacion=findViewById(R.id.malaPuntuacion);
@@ -60,8 +59,16 @@ public class FinDeJuego extends AppCompatActivity implements View.OnClickListene
 
     }
 
-    @Override
-    public void onClick(View v) {
-        startActivity(vueltaAtras);
+    public void reintento(View view) {
+        vueltaAtras=new Intent(FinDeJuego.this,MainActivity.class);
+        atras=findViewById(R.id.reintentar);
+        atras.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(vueltaAtras);
+            }
+        });
     }
+
+
 }

@@ -24,8 +24,7 @@ public class Pregunta5 extends AppCompatActivity implements View.OnClickListener
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pregunta5);
-        i=new Intent(Pregunta5.this,FinDeJuego.class);
-        vueltaAtras=new Intent(Pregunta5.this,MainActivity.class);
+
         mostrarPuntuacion=findViewById(R.id.puntuacionFinal);
         a= findViewById(R.id.respuesta1);
         b= findViewById(R.id.respuesta2);
@@ -58,7 +57,7 @@ public class Pregunta5 extends AppCompatActivity implements View.OnClickListener
         mostrarPuntuacion.setText("Su puntuación es: " + puntuacion+ " puntos");
     }
 
-    @SuppressLint("WrongConstant")
+    @SuppressLint({"WrongConstant", "NonConstantResourceId"})
     @Override
     public void onClick(View arg0){
         switch (arg0.getId()){
@@ -117,19 +116,25 @@ public class Pregunta5 extends AppCompatActivity implements View.OnClickListener
                 Toast.makeText(this,"Respuesta incorrecta -2 puntos",5).show();
                 break;
             case R.id.siguientePregunta:
+                i=new Intent(Pregunta5.this,FinDeJuego.class);
+                sig= findViewById(R.id.siguientePregunta);
+                i.putExtra("puntuacion",puntuacion);
                 startActivity(i);
                 break;
             case R.id.reintentar:
+                vueltaAtras=new Intent(Pregunta5.this,MainActivity.class);
+                atras=findViewById(R.id.reintentar);
                 startActivity(vueltaAtras);
                 break;
             default:
         }
-        i.putExtra("puntuacion",puntuacion);
+
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         return super.onCreateOptionsMenu(menu);
     }
+
 
 }

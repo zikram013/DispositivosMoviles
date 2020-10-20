@@ -11,6 +11,7 @@
 
     <Button
         android:id="@+id/iniciarJuego"
+        android:onClick="inicio"
         android:layout_width="0dp"
         android:layout_height="73dp"
         android:layout_marginStart="16dp"

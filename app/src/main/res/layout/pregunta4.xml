@@ -111,6 +111,7 @@
 
     <Button
         android:id="@+id/siguientePregunta"
+        android:onClick="siguiente"
         android:layout_width="145dp"
         android:layout_height="56dp"
         android:layout_marginEnd="20dp"
@@ -131,6 +132,7 @@
 
     <Button
         android:id="@+id/reintentar"
+        android:onClick="reintento"
         android:layout_width="154dp"
         android:layout_height="54dp"
         android:layout_x="0dp"

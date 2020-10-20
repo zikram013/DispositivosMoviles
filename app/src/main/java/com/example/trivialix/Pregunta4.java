@@ -24,8 +24,7 @@ public class Pregunta4 extends AppCompatActivity implements View.OnClickListener
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pregunta4);
-        i=new Intent(Pregunta4.this,Pregunta5.class);
-        vueltaAtras=new Intent(Pregunta4.this,MainActivity.class);
+
         mostrarPuntuacion=findViewById(R.id.puntuacionFinal);
         a= findViewById(R.id.respuesta1);
         b= findViewById(R.id.respuesta2);
@@ -116,18 +115,25 @@ public class Pregunta4 extends AppCompatActivity implements View.OnClickListener
                 Toast.makeText(this,"Respuesta correcta +3 puntos",5).show();
                 break;
             case R.id.siguientePregunta:
+                i=new Intent(Pregunta4.this,Pregunta5.class);
+                sig= findViewById(R.id.siguientePregunta);
+                i.putExtra("puntuacion",puntuacion);
                 startActivity(i);
                 break;
             case R.id.reintentar:
+                vueltaAtras=new Intent(Pregunta4.this,MainActivity.class);
+                atras=findViewById(R.id.reintentar);
                 startActivity(vueltaAtras);
                 break;
             default:
         }
-        i.putExtra("puntuacion",puntuacion);
+
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         return super.onCreateOptionsMenu(menu);
     }
+
+
 }
