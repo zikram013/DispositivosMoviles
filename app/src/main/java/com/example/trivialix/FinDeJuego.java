@@ -62,12 +62,8 @@ public class FinDeJuego extends AppCompatActivity {
     public void reintento(View view) {
         vueltaAtras=new Intent(FinDeJuego.this,MainActivity.class);
         atras=findViewById(R.id.reintentar);
-        atras.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(vueltaAtras);
-            }
-        });
+      startActivity(vueltaAtras);
+
     }
 
 
