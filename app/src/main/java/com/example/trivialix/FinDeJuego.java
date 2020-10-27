@@ -12,10 +12,10 @@ import android.widget.Toast;
 import pl.droidsonroids.gif.GifImageView;
 
 public class FinDeJuego extends AppCompatActivity {
-    private Button sig,atras;
+    private Button atras;
     private TextView mostrarPuntuacion;
     private int puntuacion=0;
-    private Intent i,recibe,vueltaAtras;
+    private Intent recibe,vueltaAtras;
     private Bundle bolsa;
     private GifImageView gifBuenaPuntacion,gifMalaPuntacion, gifPuntacionNormal;
 
@@ -62,7 +62,7 @@ public class FinDeJuego extends AppCompatActivity {
     public void reintento(View view) {
         vueltaAtras=new Intent(FinDeJuego.this,MainActivity.class);
         atras=findViewById(R.id.reintentar);
-      startActivity(vueltaAtras);
+        startActivity(vueltaAtras);
 
     }
 
