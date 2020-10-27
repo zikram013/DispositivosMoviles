@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    Intent i;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,13 +17,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void inicio(View view){
-        i=new Intent(MainActivity.this,Pregunta1.class);
+        final Intent i=new Intent(MainActivity.this,Pregunta1.class);
         Button iniciarJuego = findViewById(R.id.iniciarJuego);
-        iniciarJuego.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(i);
-            }
-        });
+        startActivity(i);
+
     }
 }
