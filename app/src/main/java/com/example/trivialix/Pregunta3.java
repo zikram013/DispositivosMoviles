@@ -14,16 +14,14 @@ import android.widget.Toast;
 public class Pregunta3 extends AppCompatActivity implements View.OnClickListener {
     private Button a,b,c,d,sig,atras;
     private int puntuacion=0;
-    private Intent i,recibe,vueltaAtras;
-    private Bundle bolsa;
-    private TextView mostrarPuntuacion;
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pregunta3);
 
-        mostrarPuntuacion=findViewById(R.id.puntuacionFinal);
+        TextView mostrarPuntuacion = findViewById(R.id.puntuacionFinal);
         a= findViewById(R.id.respuesta1);
         b= findViewById(R.id.respuesta2);
         c= findViewById(R.id.respuesta3);
@@ -33,16 +31,16 @@ public class Pregunta3 extends AppCompatActivity implements View.OnClickListener
         atras.setVisibility(View.INVISIBLE);
         sig.setVisibility(View.INVISIBLE);
         try{
-
+            Intent recibe = getIntent();
+            Bundle bolsa = recibe.getExtras();
+            puntuacion= bolsa.getInt("puntuacion");
+            if(puntuacion<0){
+                puntuacion=0;
+            }
         }catch (Exception e){
             Toast.makeText(this,"Error al recibir datos",Toast.LENGTH_SHORT).show();
         }
-        recibe=getIntent();
-        bolsa=recibe.getExtras();
-        puntuacion=bolsa.getInt("puntuacion");
-        if(puntuacion<0){
-            puntuacion=0;
-        }
+
         a.setOnClickListener(this);
         b.setOnClickListener(this);
         c.setOnClickListener(this);
@@ -54,7 +52,7 @@ public class Pregunta3 extends AppCompatActivity implements View.OnClickListener
         mostrarPuntuacion.setText("Su puntuación es: " + puntuacion + " puntos");
     }
 
-    @SuppressLint("WrongConstant")
+    @SuppressLint({"WrongConstant", "NonConstantResourceId", "ShowToast"})
     @Override
     public void onClick(View arg0){
         switch (arg0.getId()){
@@ -113,13 +111,13 @@ public class Pregunta3 extends AppCompatActivity implements View.OnClickListener
                 Toast.makeText(this,"Respuesta incorrecta -2 puntos",5).show();
                 break;
             case R.id.siguientePregunta:
-                i=new Intent(Pregunta3.this,Pregunta4.class);
+                Intent i = new Intent(Pregunta3.this, Pregunta4.class);
                 sig= findViewById(R.id.siguientePregunta);
                 i.putExtra("puntuacion",puntuacion);
                 startActivity(i);
                 break;
             case R.id.reintentar:
-                vueltaAtras=new Intent(Pregunta3.this,MainActivity.class);
+                Intent vueltaAtras = new Intent(Pregunta3.this, MainActivity.class);
                 atras=findViewById(R.id.reintentar);
                 startActivity(vueltaAtras);
                 break;

@@ -12,12 +12,7 @@ import android.widget.Toast;
 import pl.droidsonroids.gif.GifImageView;
 
 public class FinDeJuego extends AppCompatActivity {
-    private Button atras;
-    private TextView mostrarPuntuacion;
-    private int puntuacion=0;
-    private Intent recibe,vueltaAtras;
-    private Bundle bolsa;
-    private GifImageView gifBuenaPuntacion,gifMalaPuntacion, gifPuntacionNormal;
+
 
 
     @SuppressLint("SetTextI18n")
@@ -26,42 +21,42 @@ public class FinDeJuego extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.findeljuego);
 
-        atras=findViewById(R.id.reintentar);
-        mostrarPuntuacion=findViewById(R.id.puntuacionFinal);
-        gifBuenaPuntacion=findViewById(R.id.buenaPuntuacion);
-        gifMalaPuntacion=findViewById(R.id.malaPuntuacion);
-        gifPuntacionNormal=findViewById(R.id.puntuacionNormal);
+
+        TextView mostrarPuntuacion = findViewById(R.id.puntuacionFinal);
+        GifImageView gifBuenaPuntacion = findViewById(R.id.buenaPuntuacion);
+        GifImageView gifMalaPuntacion = findViewById(R.id.malaPuntuacion);
+        GifImageView gifPuntacionNormal = findViewById(R.id.puntuacionNormal);
         gifMalaPuntacion.setVisibility(View.INVISIBLE);
         gifBuenaPuntacion.setVisibility(View.INVISIBLE);
         gifPuntacionNormal.setVisibility(View.INVISIBLE);
 
         try {
+            Intent recibe = getIntent();
+            Bundle bolsa = recibe.getExtras();
+            assert bolsa != null;
+            int puntuacion = bolsa.getInt("puntuacion");
+            if(puntuacion <=0){
+                mostrarPuntuacion.setText("Su puntuación es: 0 puntos" );
+            }else{
+                mostrarPuntuacion.setText("Su puntuación es: " + puntuacion + " puntos");
+            }
+
+            if(puntuacion <=4){
+                gifMalaPuntacion.setVisibility(View.VISIBLE);
+            } else if(puntuacion <= 9){
+                gifPuntacionNormal.setVisibility(View.VISIBLE);
+            }else{
+                gifBuenaPuntacion.setVisibility(View.VISIBLE);
+            }
         }catch(Exception e){
             Toast.makeText(this,"Error al recibir datos",Toast.LENGTH_SHORT).show();
         }
-        recibe=getIntent();
-        bolsa=recibe.getExtras();
-        assert bolsa != null;
-        puntuacion=bolsa.getInt("puntuacion");
-        if(puntuacion<=0){
-            mostrarPuntuacion.setText("Su puntuación es: 0 puntos" );
-        }else{
-            mostrarPuntuacion.setText("Su puntuación es: " + puntuacion + " puntos");
-        }
 
-        if(puntuacion<=4){
-            gifMalaPuntacion.setVisibility(View.VISIBLE);
-        } else if(puntuacion <= 9){
-            gifPuntacionNormal.setVisibility(View.VISIBLE);
-        }else{
-            gifBuenaPuntacion.setVisibility(View.VISIBLE);
-        }
 
     }
 
     public void reintento(View view) {
-        vueltaAtras=new Intent(FinDeJuego.this,MainActivity.class);
-        atras=findViewById(R.id.reintentar);
+        Intent vueltaAtras = new Intent(FinDeJuego.this, MainActivity.class);
         startActivity(vueltaAtras);
 
     }

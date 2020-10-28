@@ -18,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void inicio(View view){
         final Intent i=new Intent(MainActivity.this,Pregunta1.class);
-        Button iniciarJuego = findViewById(R.id.iniciarJuego);
         startActivity(i);
 
     }
