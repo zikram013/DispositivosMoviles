@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import java.io.IOException;
+
 public class MainActivity extends AppCompatActivity {
     Intent i;
 
@@ -13,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+<<<<<<< Updated upstream
         i=new Intent(MainActivity.this,Pregunta1.class);
         Button iniciarJuego = findViewById(R.id.iniciarJuego);
         iniciarJuego.setOnClickListener(new View.OnClickListener() {
@@ -21,5 +24,23 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+=======
+//Inicializar BBDD
+        BaseDatos db = new BaseDatos(this, "DB_NAME", null, 1);
+        try {
+            db.createDataBase();
+            db.openDataBase();
+        } catch(IOException e) {
+
+            e.printStackTrace();
+        }
+    }
+
+
+    public void inicio(View view){
+        final Intent i=new Intent(MainActivity.this,Pregunta1.class);
+        startActivity(i);
+
+>>>>>>> Stashed changes
     }
 }
