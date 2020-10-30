@@ -10,12 +10,11 @@ import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
     Intent i;
-
+    public BaseDatos dbGlobal;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-<<<<<<< Updated upstream
         i=new Intent(MainActivity.this,Pregunta1.class);
         Button iniciarJuego = findViewById(R.id.iniciarJuego);
         iniciarJuego.setOnClickListener(new View.OnClickListener() {
@@ -24,9 +23,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
-=======
-//Inicializar BBDD
-        BaseDatos db = new BaseDatos(this, "DB_NAME", null, 1);
+
+        dbGlobal = iniciarBBDD();
+
+    }
+
+    public BaseDatos iniciarBBDD(){
+        //Inicializar BBDD
+        BaseDatos db = new BaseDatos(this, "dbTrivialix", null, 1);
         try {
             db.createDataBase();
             db.openDataBase();
@@ -34,13 +38,16 @@ public class MainActivity extends AppCompatActivity {
 
             e.printStackTrace();
         }
+        return db;
     }
 
 
     public void inicio(View view){
         final Intent i=new Intent(MainActivity.this,Pregunta1.class);
         startActivity(i);
+        dbGlobal.getReadableDatabase();
+        System.out.println("hola");
+        System.out.println(databaseList());
 
->>>>>>> Stashed changes
     }
 }
