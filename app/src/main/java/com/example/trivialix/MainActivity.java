@@ -11,8 +11,8 @@ import android.widget.Button;
 import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
-    Intent i;
-    public BaseDatos dbGlobal;
+    private Intent i;
+    private BaseDatos dbGlobal;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
