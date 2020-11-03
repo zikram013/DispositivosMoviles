@@ -4,6 +4,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+import com.example.myapplication.Cuestiones.Preguntas;
 import com.example.myapplication.Temas.Tematicas;
 import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
 
@@ -45,6 +46,34 @@ public class DBHelper extends SQLiteAssetHelper {
         cursor.close();
         db.close();
         return temas;
+    }
+
+    //Obtener las preguntas
+    public List<Preguntas>getPreguntasbyTematica(int idTematica){
+        SQLiteDatabase db=instance.getWritableDatabase();
+        Cursor cursor=db.rawQuery(String.format("select * from Preguntas where id_tema =%d order by Random(); ",idTematica),null);
+        List<Preguntas>preguntas=new ArrayList<>();
+        if (cursor.moveToFirst()) {
+
+            while (!cursor.isAfterLast()){
+                Preguntas pregunta=new Preguntas(cursor.getInt(cursor.getColumnIndex("id_pregunta")),
+                        cursor.getString(cursor.getColumnIndex("enunciado")),
+                        cursor.getString(cursor.getColumnIndex("imagen")),
+                        cursor.getString(cursor.getColumnIndex("audio")),
+                        cursor.getString(cursor.getColumnIndex("OpcionA")),
+                        cursor.getString(cursor.getColumnIndex("OpcionB")),
+                        cursor.getString(cursor.getColumnIndex("OpcionC")),
+                        cursor.getString(cursor.getColumnIndex("OpcionD")),
+                        cursor.getString(cursor.getColumnIndex("OpcionCorrecta")),
+                        cursor.getInt(cursor.getColumnIndex("TieneImagenAudio")),
+                        cursor.getInt(cursor.getColumnIndex("id_tema")));
+                preguntas.add(pregunta);
+                cursor.moveToNext();
+            }
+        }
+        cursor.close();
+        db.close();
+        return preguntas;
     }
 
 }

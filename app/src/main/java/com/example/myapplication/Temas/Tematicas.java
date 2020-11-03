@@ -9,6 +9,10 @@ public class Tematicas {
         this.nombreTematica = nombreTematica;
     }
 
+    public Tematicas() {
+
+    }
+
     public int getId_tematica() {
         return id_tematica;
     }

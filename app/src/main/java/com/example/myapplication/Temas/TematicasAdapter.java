@@ -1,6 +1,7 @@
 package com.example.myapplication.Temas;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,8 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.myapplication.Common.Comun;
+import com.example.myapplication.QuestionAnswerActivity;
 import com.example.myapplication.R;
 
 import java.util.List;
@@ -52,7 +55,9 @@ public class TematicasAdapter extends RecyclerView.Adapter<TematicasAdapter.MyVi
             card_tematica.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(context, "Elige tematica "+tematicasList.get(getAdapterPosition()).getNombreTematica(), Toast.LENGTH_SHORT).show();
+                    Comun.selectTematica=tematicasList.get(getAdapterPosition());
+                    Intent intent=new Intent(context, QuestionAnswerActivity.class);
+                    context.startActivity(intent);
                 }
             });
 
