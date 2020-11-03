@@ -6,7 +6,7 @@
         android:allowBackup="true"
         android:icon="@drawable/trivialix_icon"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/trivialix_icon_redondo"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
