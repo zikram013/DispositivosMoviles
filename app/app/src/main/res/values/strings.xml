@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Trivialix</string>
+    <string name="bienvenido_a_trivialix">Bienvenido a Trivialix</string>
+    <string name="podras_adivinar_todas">¿Podras adivinar todas?</string>
+    <string name="record">Puntuacion: 0</string>
+    <string name="puntuacion_0">Puntuacion: 0</string>
+    <string name="pregunta_1_x">Pregunta: 1/x</string>
+</resources>
