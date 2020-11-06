@@ -10,6 +10,7 @@ import android.widget.LinearLayout;
 import androidx.annotation.Nullable;
 
 import com.example.trivialix.Cuestiones.Preguntas;
+import com.example.trivialix.Temas.Tematicas;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,14 +19,17 @@ public class DBHelper extends SQLiteOpenHelper{
 
     private static final String DATABASE_NAME="trivialixV3.db";
     private static final int DATABASE_VERSION=1;
+    private SQLiteDatabase db;
     private static DBHelper instance;
 
-    public static synchronized  DBHelper getInstance(Context context){
+    public static synchronized DBHelper getInstance(Context context){
         if(instance==null){
-            instance=new DBHelper(context);
+            instance=new DBHelper(context.getApplicationContext());
         }
-        return  instance;
+        return instance;
     }
+
+
 
 
     public DBHelper(@Nullable Context context) {
@@ -34,7 +38,7 @@ public class DBHelper extends SQLiteOpenHelper{
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-
+        this.db=db;
     }
 
     @Override
@@ -42,10 +46,34 @@ public class DBHelper extends SQLiteOpenHelper{
 
     }
 
-   public List<Preguntas>getAllPreguntas(){
+    @Override
+    public void onConfigure(SQLiteDatabase db) {
+        super.onConfigure(db);
+        db.setForeignKeyConstraintsEnabled(true);
+    }
+
+    public List<Tematicas>getAllTematicas(){
+        List<Tematicas>listaTematicas=new ArrayList<>();
+        db=getWritableDatabase();
+        Cursor cursor=db.rawQuery("SELECT * FROM Tematicas",null);
+        if (cursor.moveToFirst()) {
+
+            while (!cursor.isAfterLast()){
+                Tematicas tematicas=new Tematicas(cursor.getInt(cursor.getColumnIndex("id_tematica")),
+                        cursor.getString(cursor.getColumnIndex("nombreTematica")));
+                listaTematicas.add(tematicas);
+                cursor.moveToNext();
+            }
+        }
+        cursor.close();
+        db.close();
+        return listaTematicas;
+    }
+
+    public List<Preguntas>getAllPreguntas(int idTematica){
        List<Preguntas>listaDePreguntas=new ArrayList<>();
-       SQLiteDatabase db=instance.getWritableDatabase();
-       Cursor cursor=db.rawQuery("select * from Preguntas",null);
+       db=getWritableDatabase();
+       Cursor cursor=db.rawQuery("SELECT * FROM  Preguntas WHERE id_tema=id_tematica",null);
            if (cursor.moveToFirst()) {
                while (!cursor.isAfterLast()){
                    Preguntas pregunta=new Preguntas(cursor.getInt(cursor.getColumnIndex("id_pregunta")),

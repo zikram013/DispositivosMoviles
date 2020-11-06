@@ -13,6 +13,10 @@ public class Tematicas {
 
     }
 
+    public Tematicas(String nombreTematica) {
+        this.nombreTematica = nombreTematica;
+    }
+
     public int getId_tematica() {
         return id_tematica;
     }
@@ -31,9 +35,6 @@ public class Tematicas {
 
     @Override
     public String toString() {
-        return "Tematicas{" +
-                "id_tematica=" + id_tematica +
-                ", nombreTematica='" + nombreTematica + '\'' +
-                '}';
+        return getNombreTematica();
     }
 }

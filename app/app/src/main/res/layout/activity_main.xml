@@ -24,6 +24,14 @@
         android:layout_centerInParent="true"
         android:text="@string/podras_adivinar_todas" />
 
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tematicas"
+        android:layout_alignStart="@+id/startTrivialix"
+        android:layout_below="@+id/startTrivialix"
+        android:layout_marginTop="16dp"/>
+
     <TextView
         android:id="@+id/puntos"
         android:layout_width="wrap_content"

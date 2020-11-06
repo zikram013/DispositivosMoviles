@@ -25,6 +25,7 @@ public class QuizActivity extends AppCompatActivity {
     private TextView textEnunciado;
     private TextView textPuntos;
     private TextView textContadorPreguntas;
+    private TextView textViewTematica;
     private TextView textTemporizador;
     private RadioGroup radioGroup;
     private RadioButton rb1;
@@ -43,10 +44,12 @@ public class QuizActivity extends AppCompatActivity {
 
 
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
 
+        textViewTematica=findViewById(R.id.tematicaElegida);
         textEnunciado=findViewById(R.id.pregunta);
         textPuntos=findViewById(R.id.puntuacion);
         textContadorPreguntas=findViewById(R.id.numeroPregunta);
@@ -57,15 +60,22 @@ public class QuizActivity extends AppCompatActivity {
         rb3=findViewById(R.id.opcionc);
         rb4=findViewById(R.id.opciond);
         next=findViewById(R.id.siguiente);
-
         colors=rb1.getTextColors();
 
-        DBHelper dbHelper=new DBHelper(this);
-        listaDePreguntas=dbHelper.getAllPreguntas();
-        preguntasTotales=listaDePreguntas.size();
-        Collections.shuffle(listaDePreguntas);
+        Intent intent=getIntent();
+        int tematicaid=intent.getIntExtra(MainActivity.ID_TEMATICA,0);
+        String tematicaName= intent.getStringExtra(MainActivity.TEMATICA);
 
-        siguiente();
+        textViewTematica.setText("Tematica: " +tematicaName);
+
+        if(savedInstanceState==null){
+            DBHelper dbHelper=DBHelper.getInstance(this);
+            listaDePreguntas=dbHelper.getAllPreguntas(tematicaid);
+            preguntasTotales=listaDePreguntas.size();
+            Collections.shuffle(listaDePreguntas);
+            siguiente();
+        }
+
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

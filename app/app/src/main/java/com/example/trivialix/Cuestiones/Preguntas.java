@@ -1,6 +1,9 @@
 package com.example.trivialix.Cuestiones;
 
-public class Preguntas {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class Preguntas implements Parcelable {
     private int idPregunta;
     private String enunciado;
     private String imagen;
@@ -27,6 +30,18 @@ public class Preguntas {
     public Preguntas(){
 
     }
+
+    public static final Creator<Preguntas> CREATOR = new Creator<Preguntas>() {
+        @Override
+        public Preguntas createFromParcel(Parcel in) {
+            return new Preguntas(in);
+        }
+
+        @Override
+        public Preguntas[] newArray(int size) {
+            return new Preguntas[size];
+        }
+    };
 
     public int getIdPregunta() {
         return idPregunta;
@@ -131,5 +146,36 @@ public class Preguntas {
                 ", tieneImagenOAudio=" + tieneImagenOAudio +
                 ", id_tema=" + id_tema +
                 '}';
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeInt(idPregunta);
+        dest.writeString(enunciado);
+        dest.writeString(imagen);
+        dest.writeString(audio);
+        dest.writeString(opcionA);
+        dest.writeString(opcionB);
+        dest.writeString(opcionC);
+        dest.writeString(opcionD);
+        dest.writeString(opcionCorrecta);
+        dest.writeInt(tieneImagenOAudio);
+        dest.writeInt(id_tema);
+    }
+
+    protected Preguntas(Parcel in){
+        idPregunta=in.readInt();
+        enunciado=in.readString();
+        opcionA=in.readString();
+        opcionB=in.readString();
+        opcionC=in.readString();
+        opcionD=in.readString();
+        opcionCorrecta=in.readString();
+        id_tema=in.readInt();
     }
 }

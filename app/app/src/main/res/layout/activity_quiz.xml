@@ -24,6 +24,15 @@
         android:textColor="@android:color/black" />
 
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tematicaElegida"
+        android:layout_below="@+id/numeroPregunta"
+        android:text="Tematica"
+        android:textColor="@android:color/black"
+        android:freezesText="true"/>
+
+    <TextView
         android:id="@+id/tiempo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
