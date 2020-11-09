@@ -12,6 +12,7 @@ import android.widget.Spinner;
 import com.example.trivialix.DBHelper.DBHelper;
 import com.example.trivialix.Temas.Tematicas;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -40,7 +41,13 @@ public class MainActivity extends AppCompatActivity {
 
     private void cargarTematicas() {
         DBHelper dbHelper=DBHelper.getInstance(this);
-        List<Tematicas> listaTematicas=dbHelper.getAllTematicas();
+        List<Tematicas> listaTematicas = new ArrayList<>();
+        try{
+            listaTematicas =dbHelper.getAllTematicas();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+
 
         ArrayAdapter<Tematicas>adapterTematicas=new ArrayAdapter<>(this, android.R.layout.simple_spinner_item,listaTematicas);
         adapterTematicas.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);

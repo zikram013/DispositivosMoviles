@@ -15,6 +15,11 @@ import com.example.trivialix.QuizContract;
 import com.example.trivialix.Temas.Tematicas;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -55,20 +60,24 @@ public class DBHelper extends SQLiteOpenHelper{
         db.setForeignKeyConstraintsEnabled(true);
     }
 
-    public List<Tematicas>getAllTematicas(){
+    public List<Tematicas>getAllTematicas() throws SQLException {
         List<Tematicas>listaTematicas=new ArrayList<>();
         db=getWritableDatabase();
-        Cursor cursor=db.rawQuery("SELECT * FROM Tematicas",null);
-        if (cursor.moveToFirst()) {
-            while (!cursor.isAfterLast()){
+        Connection m_Connection = DriverManager.getConnection(String.valueOf(db));
+        Statement m_Statement = m_Connection.createStatement();
+        String myQuery = "SELECT * FROM Tematicas";
+        ResultSet m_ResultSet = m_Statement.executeQuery(myQuery);
+        //Cursor cursor=db.rawQuery(myQuery,null);
+        if (m_ResultSet.first()) {
+            while (!m_ResultSet.isAfterLast()){
                 Tematicas tematicas=new Tematicas();
-                tematicas.setId_tematica(cursor.getInt(cursor.getColumnIndex("id_tematica")));
-                tematicas.setNombreTematica(cursor.getString(cursor.getColumnIndex("nombreTematica")));
+                tematicas.setId_tematica(m_ResultSet.getInt(m_ResultSet.findColumn("id_tematica")));
+                tematicas.setNombreTematica(m_ResultSet.getString(m_ResultSet.findColumn("nombreTematica")));
                 listaTematicas.add(tematicas);
-                cursor.moveToNext();
+                m_ResultSet.next();
             }
         }
-        cursor.close();
+        m_ResultSet.close();
         db.close();
         return listaTematicas;
     }
@@ -76,7 +85,8 @@ public class DBHelper extends SQLiteOpenHelper{
     public List<Preguntas>getAllPreguntas(int idTematica){
        List<Preguntas>listaDePreguntas=new ArrayList<>();
        db=getWritableDatabase();
-       Cursor cursor=db.rawQuery("SELECT * FROM  Preguntas",null);
+       String myQuery = "SELECT * FROM  Preguntas";
+       Cursor cursor=db.rawQuery(myQuery,null);
            if (cursor.moveToFirst()) {
                while (!cursor.isAfterLast()){
                    Preguntas pregunta=new Preguntas(cursor.getInt(cursor.getColumnIndex("id_pregunta")),
